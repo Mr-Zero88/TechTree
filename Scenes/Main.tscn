@@ -1,0 +1,79 @@
+[gd_scene load_steps=10 format=3 uid="uid://coarme3bsgscw"]
+
+[ext_resource type="Script" uid="uid://dnlx7b7ibhpdo" path="res://Scenes/path_3d.gd" id="1_r150o"]
+
+[sub_resource type="GDScript" id="GDScript_idj7w"]
+script/source = "extends Node3D
+"
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_r150o"]
+sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+
+[sub_resource type="Sky" id="Sky_idj7w"]
+sky_material = SubResource("ProceduralSkyMaterial_r150o")
+
+[sub_resource type="Environment" id="Environment_kln2b"]
+background_mode = 2
+sky = SubResource("Sky_idj7w")
+tonemap_mode = 2
+ssao_enabled = true
+glow_enabled = true
+
+[sub_resource type="Curve3D" id="Curve3D_c1w88"]
+closed = true
+_data = {
+"points": PackedVector3Array(-0.432427, 0.584432, 0.957988, 0.432427, -0.584432, -0.957988, -0.150025, 1.74583, -4.74107, -1.39188, 1.7778, -1.538, 1.39188, -1.7778, 1.538, 2.52858, 0.374308, -6.60909, 0.814059, 0.275458, -1.3844, -0.814059, -0.275458, 1.3844, 3.64324, -1.47178, -2.90897, 0.996185, -0.34959, -1.16162, -0.996185, 0.34959, 1.16162, 0.592834, -1.24383, 2.31651, 0.514608, -0.839139, 0.601279, -0.514608, 0.839139, -0.601279, -2.47053, 0.57024, 3.73998, -0.670375, -0.261348, 1.46136, 0.670375, 0.261348, -1.46136, -3.24073, 2.91874, 0.525027),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0)
+}
+point_count = 6
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r150o"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_r150o"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_idj7w"]
+
+[node name="Main" type="Node3D"]
+script = SubResource("GDScript_idj7w")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_kln2b")
+
+[node name="Path3D" type="Path3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.82551, 0)
+curve = SubResource("Curve3D_c1w88")
+script = ExtResource("1_r150o")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="Path3D"]
+transform = Transform3D(-0.226176, 0.854422, 0.467615, 0.969319, 0.244603, 0.0218792, -0.0956926, 0.458224, -0.883614, 2.84728, -1.60859, -1.45289)
+progress = 10.9275
+cubic_interp = false
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Path3D/PathFollow3D"]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+use_collision = true
+size = Vector3(100, 0.001, 100)
+material = SubResource("StandardMaterial3D_r150o")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.994984, 0.100032, 0, -0.100032, 0.994984, 0, 3.99113, 11.7896)
+current = true
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.46166, 0)
+light_energy = 5.215
+
+[node name="RigidBody3D" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.18066, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D"]
+mesh = SubResource("BoxMesh_r150o")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+shape = SubResource("BoxShape3D_idj7w")
