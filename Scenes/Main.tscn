@@ -1,6 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://coarme3bsgscw"]
 
-[ext_resource type="Script" uid="uid://dnlx7b7ibhpdo" path="res://Scenes/path_3d.gd" id="1_r150o"]
+[ext_resource type="Script" uid="uid://6l363iepftwb" path="res://Scripts/TechNode.gd" id="1_rgh2o"]
+[ext_resource type="PackedScene" uid="uid://ds1ubnrgv865p" path="res://Scenes/TechNode.tscn" id="2_idj7w"]
 
 [sub_resource type="GDScript" id="GDScript_idj7w"]
 script/source = "extends Node3D
@@ -20,14 +21,6 @@ tonemap_mode = 2
 ssao_enabled = true
 glow_enabled = true
 
-[sub_resource type="Curve3D" id="Curve3D_c1w88"]
-closed = true
-_data = {
-"points": PackedVector3Array(-2.9492, 0.369301, -1.12855, 2.9492, -0.369301, 1.12855, 2.52858, -0.728918, -6.60909, 0.814059, 0.275458, -1.3844, -0.814059, -0.275458, 1.3844, 3.64324, -1.47178, -2.90897, 0.996185, -0.34959, -1.16162, -0.996185, 0.34959, 1.16162, 0.592834, -1.24383, 2.31651, 0.514608, -0.839139, 0.601279, -0.514608, 0.839139, -0.601279, -2.47053, -1.67753, 3.73998, -0.670375, -0.261348, 1.46136, 0.670375, 0.261348, -1.46136, -3.24073, -1.12906, 0.525027),
-"tilts": PackedFloat32Array(0, 0, 0, 0, 0)
-}
-point_count = 5
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r150o"]
 
 [node name="Main" type="Node3D"]
@@ -40,19 +33,8 @@ shadow_enabled = true
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_kln2b")
 
-[node name="Path3D" type="Path3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.82551, 0)
-curve = SubResource("Curve3D_c1w88")
-script = ExtResource("1_r150o")
-
-[node name="PathFollow3D" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.73026, 0.301112, 0.613143, 0.221996, 0.953415, -0.20385, -0.646006, -0.0127481, -0.763162, 0.693084, -1.27803, 2.19539)
-progress = 10.9275
-cubic_interp = false
-
-[node name="CSGBox3D" type="CSGBox3D" parent="Path3D/PathFollow3D"]
-
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
+visible = false
 use_collision = true
 size = Vector3(100, 0.001, 100)
 material = SubResource("StandardMaterial3D_r150o")
@@ -66,3 +48,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.46166, 0)
 light_energy = 5.215
 
 [node name="Nodes" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+script = ExtResource("1_rgh2o")
+
+[node name="TechNode" parent="Nodes" instance=ExtResource("2_idj7w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.54381)
+
+[node name="TechNode2" parent="Nodes" instance=ExtResource("2_idj7w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9.31644)

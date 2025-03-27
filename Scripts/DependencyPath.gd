@@ -1,12 +1,20 @@
+@tool
 extends Path3D
+class_name DependencyPath
 
 const RAY_LENGTH = 100
 const SPEED = 30
+
+@export var model: Mesh:
+	set(value):
+		model = value
+		$PathFollow3D/MeshInstance3D.mesh = value
 
 func absoluteClosestSort(a, b) -> bool:
 	return abs(a) - abs(b) < 0
 
 func _process(delta: float) -> void:
+	if(Engine.is_editor_hint()): return
 	if Input.is_action_pressed('slider_move'):
 		var mousePos = get_viewport().get_mouse_position()
 		var camera_3d = get_viewport().get_camera_3d()

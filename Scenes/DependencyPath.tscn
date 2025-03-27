@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bv557cuctre4h"]
+
+[ext_resource type="Script" uid="uid://dnlx7b7ibhpdo" path="res://Scripts/DependencyPath.gd" id="1_oj13y"]
+
+[sub_resource type="Curve3D" id="Curve3D_oj13y"]
+
+[node name="DependencyPath" type="Path3D"]
+curve = SubResource("Curve3D_oj13y")
+script = ExtResource("1_oj13y")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PathFollow3D"]
