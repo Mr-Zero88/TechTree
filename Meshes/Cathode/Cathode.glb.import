@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c8l4408cgwxlb"
-path="res://.godot/imported/assets.glb-c049f8582ea0549de9c73975f8a53c23.scn"
+uid="uid://cttnvg43sv7d6"
+path="res://.godot/imported/Cathode.glb-76097222e91b0a2dc74f1213fc93b388.scn"
 
 [deps]
 
-source_file="res://Meshes/Cathode/assets.glb"
-dest_files=["res://.godot/imported/assets.glb-c049f8582ea0549de9c73975f8a53c23.scn"]
+source_file="res://Meshes/Cathode/Cathode.glb"
+dest_files=["res://.godot/imported/Cathode.glb-76097222e91b0a2dc74f1213fc93b388.scn"]
 
 [params]
 

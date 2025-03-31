@@ -2,20 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c0ly3ykqlmw6g"
-path.s3tc="res://.godot/imported/assets_tiles.png-7b712ea0e33dff64595acb9d0bc296e3.s3tc.ctex"
+uid="uid://bw6dfwskwr7k7"
+path.s3tc="res://.godot/imported/tiles_RMS.png-768200e9759db6ef9893bbfbb740d694.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "96d0ae5fd09ce659c53882c944392816"
-}
 
 [deps]
 
-source_file="res://Meshes/Generator/assets_tiles.png"
-dest_files=["res://.godot/imported/assets_tiles.png-7b712ea0e33dff64595acb9d0bc296e3.s3tc.ctex"]
+source_file="res://Textures/tiles_RMS.png"
+dest_files=["res://.godot/imported/tiles_RMS.png-768200e9759db6ef9893bbfbb740d694.s3tc.ctex"]
 
 [params]
 
