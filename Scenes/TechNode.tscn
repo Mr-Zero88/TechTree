@@ -1,41 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://ds1ubnrgv865p"]
+[gd_scene load_steps=2 format=3 uid="uid://ds1ubnrgv865p"]
 
 [ext_resource type="Script" uid="uid://6l363iepftwb" path="res://Scripts/TechNode.gd" id="1_h7hh4"]
-[ext_resource type="Script" uid="uid://75thxom5gfp0" path="res://Scripts/Dependency.gd" id="2_l6txj"]
-[ext_resource type="PackedScene" uid="uid://bv557cuctre4h" path="res://Scenes/DependencyPath.tscn" id="3_lkrjf"]
-[ext_resource type="Script" uid="uid://dnlx7b7ibhpdo" path="res://Scripts/DependencyPath.gd" id="4_qcq8x"]
-
-[sub_resource type="Curve3D" id="Curve3D_8m7j6"]
-
-[sub_resource type="Resource" id="Resource_juv5p"]
-script = ExtResource("2_l6txj")
-node = NodePath("")
-curve = SubResource("Curve3D_8m7j6")
-
-[sub_resource type="Curve3D" id="Curve3D_hnxki"]
-_data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-"tilts": PackedFloat32Array(0, 0)
-}
-point_count = 2
-
-[sub_resource type="Resource" id="Resource_g344d"]
-script = ExtResource("2_l6txj")
-node = NodePath(".")
-curve = SubResource("Curve3D_hnxki")
-
-[sub_resource type="Curve3D" id="Curve3D_oj13y"]
 
 [node name="TechNode" type="Node3D"]
 script = ExtResource("1_h7hh4")
-dependencies = Array[ExtResource("2_l6txj")]([SubResource("Resource_juv5p"), SubResource("Resource_g344d")])
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-
-[node name="DependencyPath__2" type="Path3D" parent="." instance=ExtResource("3_lkrjf")]
-curve = SubResource("Curve3D_8m7j6")
-script = ExtResource("4_qcq8x")
-
-[node name="DependencyPath__3" type="Path3D" parent="." instance=ExtResource("3_lkrjf")]
-curve = SubResource("Curve3D_oj13y")
-script = ExtResource("4_qcq8x")
