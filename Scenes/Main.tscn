@@ -1,6 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://coarme3bsgscw"]
+[gd_scene load_steps=13 format=3 uid="uid://coarme3bsgscw"]
 
 [ext_resource type="Script" uid="uid://6l363iepftwb" path="res://Scripts/TechNode.gd" id="1_rgh2o"]
+[ext_resource type="PackedScene" uid="uid://ds1ubnrgv865p" path="res://Scenes/TechNode.tscn" id="2_jw32o"]
+[ext_resource type="ArrayMesh" uid="uid://yia3lk4h4oio" path="res://Meshes/Oil/Oil.mesh" id="3_50glp"]
+[ext_resource type="ArrayMesh" uid="uid://q52on3gyw4lk" path="res://Meshes/Motor/Motor.mesh" id="4_vy5pj"]
+[ext_resource type="Script" uid="uid://75thxom5gfp0" path="res://Scripts/Dependency.gd" id="5_jw32o"]
 
 [sub_resource type="GDScript" id="GDScript_idj7w"]
 script/source = "extends Node3D
@@ -21,6 +25,13 @@ ssao_enabled = true
 glow_enabled = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r150o"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_pbw6q"]
+
+[sub_resource type="Resource" id="Resource_v1gob"]
+script = ExtResource("5_jw32o")
+node = NodePath("")
+model = SubResource("BoxMesh_pbw6q")
 
 [node name="Main" type="Node3D"]
 script = SubResource("GDScript_idj7w")
@@ -47,5 +58,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.46166, 0)
 light_energy = 5.215
 
 [node name="Nodes" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 script = ExtResource("1_rgh2o")
+
+[node name="TechNode" parent="Nodes" instance=ExtResource("2_jw32o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.203, 2.89824, 0)
+model = ExtResource("3_50glp")
+
+[node name="TechNode2" parent="Nodes" instance=ExtResource("2_jw32o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.1013, 0, 0)
+model = ExtResource("4_vy5pj")
+dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_v1gob")])
