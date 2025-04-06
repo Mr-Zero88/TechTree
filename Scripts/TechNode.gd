@@ -30,14 +30,22 @@ var isready = false;
 
 func _ready() -> void:
 	isready = true;
-#
-@export_tool_button("Test") var test = func():
 	for i in range(dependencies.size()):
-		#connect_dependency(dependencies[i])
-		#dependencies[i].path = find_child(dependencies[i].name)
-		#dependencies[i].
-		print(dependencies[i])
-		print(dependencies[i].name)
+		connect_dependency(dependencies[i])
+
+#
+#@export_tool_button("Test") var tsest = test
+#func test():
+	##print(Dependency.new().nameChanged)
+	#print(load("res://Deps/technode.tres").nameChanged)
+	##for i in range(dependencies.size()):
+		###connect_dependency(dependencies[i])
+		###dependencies[i].path = find_child(dependencies[i].name)
+		###dependencies[i].
+		##var dependency = dependencies[i]
+		##print(dependency)
+		##print(dependency.nameChanged)
+		##print(dependency.name)
 
 func _init() -> void:
 	set_notify_transform(true)
@@ -79,14 +87,21 @@ func connect_dependency(dependency: Dependency):
 		if(name == ""):
 			dependency.path = null
 		else:
-			dependency.path = preload("res://Scenes/DependencyPath.tscn").instantiate()# DependencyPath.new()
-			dependency.path.name = name + "_Path"
+			var path = find_child(name + "_Path")
+			if(path == null):
+				path = preload("res://Scenes/DependencyPath.tscn").instantiate()
+			path.name = name + "_Path"
+			path.model = dependency.model
+			path.curve = dependency.curve
+			dependency.path = path
 	
 	var pathChanged = func(dependency: Dependency, oldPath: Path3D, path: Path3D):
 		if(oldPath != null):
 			oldPath.queue_free()
 		if(path != null):
-			self.add_child(path)
+			if(path.get_parent() == self):
+				return
+			add_child(path)
 			path.owner = get_tree().edited_scene_root
 			path.curve = dependency.curve
 	
@@ -105,3 +120,12 @@ func connect_dependency(dependency: Dependency):
 	dependency.curveChanged.connect(curveChanged)
 	dependency.pathChanged.connect(pathChanged)
 	dependency.modelChanged.connect(modelChanged)
+	
+	if(has_node(dependency.node)):
+		dependency.name = dependency.node.get_name(dependency.node.get_name_count() - 1)
+		var nodeObject: TechNode = get_node(dependency.node)
+		nodeObject.positionChanged.connect(func (nodePosition):
+			if(dependency.curve == null):
+				return
+			dependency.curve.set_point_position(0, to_local(nodePosition))
+		)
