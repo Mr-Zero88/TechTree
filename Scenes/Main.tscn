@@ -1,4 +1,4 @@
-[gd_scene load_steps=139 format=3 uid="uid://coarme3bsgscw"]
+[gd_scene load_steps=166 format=3 uid="uid://coarme3bsgscw"]
 
 [ext_resource type="Script" uid="uid://1n7dl2jsghkc" path="res://Scripts/Main.gd" id="1_50glp"]
 [ext_resource type="Script" uid="uid://dg0tw4c1yldw7" path="res://Scripts/Camera3d.gd" id="1_pbw6q"]
@@ -23,6 +23,10 @@
 [ext_resource type="ArrayMesh" uid="uid://ikdhots72o23" path="res://Meshes/car.tres" id="20_4yxf6"]
 [ext_resource type="ArrayMesh" uid="uid://b5tryd530fxg6" path="res://Meshes/cathode-tube.tres" id="21_qta6b"]
 [ext_resource type="ArrayMesh" uid="uid://ddle56s7wa1eu" path="res://Meshes/magnetron.tres" id="22_x3rx7"]
+[ext_resource type="ArrayMesh" uid="uid://b7ixd1wat76b1" path="res://Meshes/vacuum_tube.tres" id="23_aht7i"]
+[ext_resource type="Script" uid="uid://dnlx7b7ibhpdo" path="res://Scripts/DependencyPath.gd" id="25_5jffn"]
+[ext_resource type="ArrayMesh" uid="uid://bw4ceo0ttxx3b" path="res://Meshes/computer.tres" id="26_kpo4j"]
+[ext_resource type="ArrayMesh" uid="uid://chwxff1lqvdgg" path="res://Meshes/fision_reactor.tres" id="27_5jffn"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_r150o"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -568,6 +572,115 @@ node = NodePath("../Kathodenstrahlröhre")
 curve = SubResource("Curve3D_btbly")
 model = SubResource("BoxMesh_vs04g")
 
+[sub_resource type="Curve3D" id="Curve3D_utia5"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="BoxMesh" id="BoxMesh_f7hdo"]
+
+[sub_resource type="Resource" id="Resource_clvyn"]
+script = ExtResource("5_jw32o")
+node = NodePath("../Elektronenröhre")
+curve = SubResource("Curve3D_utia5")
+model = SubResource("BoxMesh_f7hdo")
+
+[sub_resource type="Curve3D" id="Curve3D_clvyn"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="BoxMesh" id="BoxMesh_d8m2u"]
+
+[sub_resource type="Resource" id="Resource_5psol"]
+script = ExtResource("5_jw32o")
+node = NodePath("../Elektronenröhre")
+curve = SubResource("Curve3D_clvyn")
+model = SubResource("BoxMesh_d8m2u")
+
+[sub_resource type="TorusMesh" id="TorusMesh_kpo4j"]
+
+[sub_resource type="Curve3D" id="Curve3D_d8m2u"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="BoxMesh" id="BoxMesh_5psol"]
+
+[sub_resource type="Resource" id="Resource_m4llh"]
+script = ExtResource("5_jw32o")
+node = NodePath("../Computer")
+curve = SubResource("Curve3D_d8m2u")
+model = SubResource("BoxMesh_5psol")
+
+[sub_resource type="Curve3D" id="Curve3D_lac6x"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="BoxMesh" id="BoxMesh_hpjjw"]
+
+[sub_resource type="Resource" id="Resource_off7b"]
+script = ExtResource("5_jw32o")
+node = NodePath("../Computer")
+curve = SubResource("Curve3D_lac6x")
+model = SubResource("BoxMesh_hpjjw")
+
+[sub_resource type="Curve3D" id="Curve3D_lfh1j"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="BoxMesh" id="BoxMesh_7sj7i"]
+
+[sub_resource type="Resource" id="Resource_semxg"]
+script = ExtResource("5_jw32o")
+node = NodePath("../Magnetron")
+curve = SubResource("Curve3D_lfh1j")
+model = SubResource("BoxMesh_7sj7i")
+
+[sub_resource type="TorusMesh" id="TorusMesh_ep8v8"]
+
+[sub_resource type="Curve3D" id="Curve3D_3133c"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="BoxMesh" id="BoxMesh_js5gh"]
+
+[sub_resource type="Resource" id="Resource_vvjo1"]
+script = ExtResource("5_jw32o")
+node = NodePath("../Kernspaltung")
+curve = SubResource("Curve3D_3133c")
+model = SubResource("BoxMesh_js5gh")
+
+[sub_resource type="Curve3D" id="Curve3D_yisvs"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="BoxMesh" id="BoxMesh_rgw24"]
+
+[sub_resource type="Resource" id="Resource_5gwyn"]
+script = ExtResource("5_jw32o")
+node = NodePath("../Strom-Kraftwerk")
+curve = SubResource("Curve3D_yisvs")
+model = SubResource("BoxMesh_rgw24")
+
 [node name="Main" type="Node3D" node_paths=PackedStringArray("infoPanel")]
 script = ExtResource("1_50glp")
 infoPanel = NodePath("CenterContainer/InfoPanel")
@@ -920,7 +1033,7 @@ end = NodePath("..")
 model = SubResource("BoxMesh_6heos")
 
 [node name="Elektronenröhre" parent="Nodes" instance=ExtResource("2_jw32o")]
-model = ExtResource("22_x3rx7")
+model = ExtResource("23_aht7i")
 dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_6ehlx")])
 
 [node name="Kathodenstrahlröhre_Path" parent="Nodes/Elektronenröhre" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
@@ -928,3 +1041,72 @@ curve = SubResource("Curve3D_btbly")
 start = NodePath("../../Kathodenstrahlröhre")
 end = NodePath("..")
 model = SubResource("BoxMesh_vs04g")
+
+[node name="Magnetron" parent="Nodes" instance=ExtResource("2_jw32o")]
+model = ExtResource("22_x3rx7")
+dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_clvyn")])
+
+[node name="Elektronenröhre_Path" type="Path3D" parent="Nodes/Magnetron" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
+curve = SubResource("Curve3D_utia5")
+script = ExtResource("25_5jffn")
+start = NodePath("../../Elektronenröhre")
+end = NodePath("..")
+model = SubResource("BoxMesh_f7hdo")
+
+[node name="Computer" parent="Nodes" instance=ExtResource("2_jw32o")]
+model = ExtResource("26_kpo4j")
+dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_5psol")])
+
+[node name="Elektronenröhre_Path" type="Path3D" parent="Nodes/Computer" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
+curve = SubResource("Curve3D_clvyn")
+script = ExtResource("25_5jffn")
+start = NodePath("../../Elektronenröhre")
+end = NodePath("..")
+model = SubResource("BoxMesh_d8m2u")
+
+[node name="Mikrochip" parent="Nodes" instance=ExtResource("2_jw32o")]
+model = SubResource("TorusMesh_kpo4j")
+dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_m4llh")])
+
+[node name="Computer_Path" type="Path3D" parent="Nodes/Mikrochip" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
+curve = SubResource("Curve3D_d8m2u")
+script = ExtResource("25_5jffn")
+start = NodePath("../../Computer")
+end = NodePath("..")
+model = SubResource("BoxMesh_5psol")
+
+[node name="Kernspaltung" parent="Nodes" instance=ExtResource("2_jw32o")]
+model = ExtResource("27_5jffn")
+dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_off7b"), SubResource("Resource_semxg")])
+
+[node name="Computer_Path" type="Path3D" parent="Nodes/Kernspaltung" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
+curve = SubResource("Curve3D_lac6x")
+script = ExtResource("25_5jffn")
+start = NodePath("../../Computer")
+end = NodePath("..")
+model = SubResource("BoxMesh_hpjjw")
+
+[node name="Magnetron_Path" type="Path3D" parent="Nodes/Kernspaltung" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
+curve = SubResource("Curve3D_lfh1j")
+script = ExtResource("25_5jffn")
+start = NodePath("../../Magnetron")
+end = NodePath("..")
+model = SubResource("BoxMesh_7sj7i")
+
+[node name="Kernkraft" parent="Nodes" instance=ExtResource("2_jw32o")]
+model = SubResource("TorusMesh_ep8v8")
+dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_vvjo1"), SubResource("Resource_5gwyn")])
+
+[node name="Kernspaltung_Path" type="Path3D" parent="Nodes/Kernkraft" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
+curve = SubResource("Curve3D_3133c")
+script = ExtResource("25_5jffn")
+start = NodePath("../../Kernspaltung")
+end = NodePath("..")
+model = SubResource("BoxMesh_js5gh")
+
+[node name="Strom-Kraftwerk_Path" type="Path3D" parent="Nodes/Kernkraft" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
+curve = SubResource("Curve3D_yisvs")
+script = ExtResource("25_5jffn")
+start = NodePath("../../Strom-Kraftwerk")
+end = NodePath("..")
+model = SubResource("BoxMesh_rgw24")
