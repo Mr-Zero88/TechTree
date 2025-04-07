@@ -1,8 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://bv557cuctre4h"]
+[gd_scene load_steps=4 format=3 uid="uid://bv557cuctre4h"]
 
 [ext_resource type="Script" uid="uid://dnlx7b7ibhpdo" path="res://Scripts/DependencyPath.gd" id="1_oj13y"]
 
 [sub_resource type="Curve3D" id="Curve3D_oj13y"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_oj13y"]
+radius = 0.75
 
 [node name="DependencyPath" type="Path3D"]
 curve = SubResource("Curve3D_oj13y")
@@ -11,3 +14,8 @@ script = ExtResource("1_oj13y")
 [node name="PathFollow3D" type="PathFollow3D" parent="."]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="PathFollow3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="PathFollow3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PathFollow3D/StaticBody3D"]
+shape = SubResource("SphereShape3D_oj13y")
