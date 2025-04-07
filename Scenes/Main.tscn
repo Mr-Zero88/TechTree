@@ -1,14 +1,27 @@
-[gd_scene load_steps=14 format=3 uid="uid://coarme3bsgscw"]
+[gd_scene load_steps=139 format=3 uid="uid://coarme3bsgscw"]
 
-[ext_resource type="Script" path="res://Scripts/Main.gd" id="1_50glp"]
-[ext_resource type="Script" path="res://Scripts/Camera3d.gd" id="1_pbw6q"]
+[ext_resource type="Script" uid="uid://1n7dl2jsghkc" path="res://Scripts/Main.gd" id="1_50glp"]
+[ext_resource type="Script" uid="uid://dg0tw4c1yldw7" path="res://Scripts/Camera3d.gd" id="1_pbw6q"]
 [ext_resource type="Script" uid="uid://6l363iepftwb" path="res://Scripts/TechNode.gd" id="1_rgh2o"]
-[ext_resource type="Material" uid="uid://dgngai68e7ies" path="res://Textures/global.material" id="6_50glp"]
-[ext_resource type="Script" path="res://Scripts/InfoPanel.gd" id="6_jw32o"]
-[ext_resource type="Script" path="res://Scenes/CloseButton.gd" id="6_v1gob"]
-[ext_resource type="ArrayMesh" uid="uid://l36q6nfjx2d4" path="res://Meshes/better-telephone.tres" id="7_jw32o"]
-[ext_resource type="ArrayMesh" uid="uid://d38tp06wbcicu" path="res://Meshes/telegraph.tres" id="8_vy5pj"]
-[ext_resource type="ArrayMesh" uid="uid://gn8226bsbp57" path="res://Meshes/telephone.tres" id="9_bmxlf"]
+[ext_resource type="PackedScene" uid="uid://ds1ubnrgv865p" path="res://Scenes/TechNode.tscn" id="2_jw32o"]
+[ext_resource type="Script" uid="uid://75thxom5gfp0" path="res://Scripts/Dependency.gd" id="5_jw32o"]
+[ext_resource type="PackedScene" uid="uid://bv557cuctre4h" path="res://Scenes/DependencyPath.tscn" id="6_50glp"]
+[ext_resource type="Script" uid="uid://dl2kb8yiw22y7" path="res://Scripts/InfoPanel.gd" id="6_jw32o"]
+[ext_resource type="Script" uid="uid://bl1nqlm3g42qa" path="res://Scenes/CloseButton.gd" id="6_v1gob"]
+[ext_resource type="ArrayMesh" uid="uid://dm02m4viyhlye" path="res://Meshes/steam_engine.tres" id="7_hwpts"]
+[ext_resource type="ArrayMesh" uid="uid://mnou86os3dap" path="res://Meshes/glass.tres" id="8_jyqft"]
+[ext_resource type="ArrayMesh" uid="uid://bavmfbmh30xte" path="res://Meshes/oil.tres" id="9_3tgeq"]
+[ext_resource type="ArrayMesh" uid="uid://dqiwmxs6e8uoi" path="res://Meshes/voltaic_collumn.tres" id="10_c4ay3"]
+[ext_resource type="ArrayMesh" uid="uid://dalmvqd1j303a" path="res://Meshes/electromagnet.tres" id="11_aht7i"]
+[ext_resource type="ArrayMesh" uid="uid://dy4q6cna42buw" path="res://Meshes/telegraph.tres" id="14_5jffn"]
+[ext_resource type="ArrayMesh" uid="uid://dxrspmu464fq5" path="res://Meshes/powercell.tres" id="15_kpo4j"]
+[ext_resource type="ArrayMesh" uid="uid://dvspbjrssu32g" path="res://Meshes/telephone.tres" id="16_4n42c"]
+[ext_resource type="ArrayMesh" uid="uid://cx34ev5thp63f" path="res://Meshes/loudespeaker.tres" id="17_c5snn"]
+[ext_resource type="ArrayMesh" uid="uid://bs7446jsc1ckg" path="res://Meshes/generator.tres" id="18_xvtyr"]
+[ext_resource type="ArrayMesh" uid="uid://bpyec1ef48eqq" path="res://Meshes/transformer.tres" id="19_u7mjy"]
+[ext_resource type="ArrayMesh" uid="uid://526q4fhs8c0s" path="res://Meshes/car.tres" id="20_4yxf6"]
+[ext_resource type="ArrayMesh" uid="uid://cb3e8hngkgv72" path="res://Meshes/cathode-tube.tres" id="21_qta6b"]
+[ext_resource type="ArrayMesh" uid="uid://b0k5a5sfwmvsh" path="res://Meshes/magnetron.tres" id="22_x3rx7"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_r150o"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -25,6 +38,536 @@ ssao_enabled = true
 glow_enabled = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r150o"]
+
+[sub_resource type="Curve3D" id="Curve3D_bmxlf"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="BoxMesh" id="BoxMesh_4kpch"]
+
+[sub_resource type="Resource" id="Resource_grg3l"]
+script = ExtResource("5_jw32o")
+node = NodePath("../Voltasche Säule")
+curve = SubResource("Curve3D_bmxlf")
+model = SubResource("BoxMesh_4kpch")
+
+[sub_resource type="Curve3D" id="Curve3D_frkhe"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="BoxMesh" id="BoxMesh_1p5hy"]
+
+[sub_resource type="Resource" id="Resource_h1m7h"]
+script = ExtResource("5_jw32o")
+node = NodePath("../Dampfmaschine")
+curve = SubResource("Curve3D_frkhe")
+model = SubResource("BoxMesh_1p5hy")
+
+[sub_resource type="Curve3D" id="Curve3D_vy5pj"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="BoxMesh" id="BoxMesh_bmxlf"]
+
+[sub_resource type="Resource" id="Resource_4kpch"]
+script = ExtResource("5_jw32o")
+node = NodePath("../Elektromagnet")
+curve = SubResource("Curve3D_vy5pj")
+model = SubResource("BoxMesh_bmxlf")
+
+[sub_resource type="Curve3D" id="Curve3D_grg3l"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="BoxMesh" id="BoxMesh_frkhe"]
+
+[sub_resource type="Resource" id="Resource_1p5hy"]
+script = ExtResource("5_jw32o")
+node = NodePath("../Voltasche Säule")
+curve = SubResource("Curve3D_grg3l")
+model = SubResource("BoxMesh_frkhe")
+
+[sub_resource type="TorusMesh" id="TorusMesh_6heos"]
+
+[sub_resource type="Curve3D" id="Curve3D_4kpch"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="BoxMesh" id="BoxMesh_grg3l"]
+
+[sub_resource type="Resource" id="Resource_frkhe"]
+script = ExtResource("5_jw32o")
+node = NodePath("../Voltasche Säule")
+curve = SubResource("Curve3D_4kpch")
+model = SubResource("BoxMesh_grg3l")
+
+[sub_resource type="Curve3D" id="Curve3D_1p5hy"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="BoxMesh" id="BoxMesh_h1m7h"]
+
+[sub_resource type="Resource" id="Resource_erwvk"]
+script = ExtResource("5_jw32o")
+node = NodePath("../Glass")
+curve = SubResource("Curve3D_1p5hy")
+model = SubResource("BoxMesh_h1m7h")
+
+[sub_resource type="TorusMesh" id="TorusMesh_vvnwx"]
+
+[sub_resource type="Curve3D" id="Curve3D_h1m7h"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="BoxMesh" id="BoxMesh_erwvk"]
+
+[sub_resource type="Resource" id="Resource_2w5on"]
+script = ExtResource("5_jw32o")
+node = NodePath("../Voltasche Säule")
+curve = SubResource("Curve3D_h1m7h")
+model = SubResource("BoxMesh_erwvk")
+
+[sub_resource type="Curve3D" id="Curve3D_erwvk"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="BoxMesh" id="BoxMesh_2w5on"]
+
+[sub_resource type="Resource" id="Resource_346fj"]
+script = ExtResource("5_jw32o")
+node = NodePath("../Brenstoffzelle")
+curve = SubResource("Curve3D_erwvk")
+model = SubResource("BoxMesh_2w5on")
+
+[sub_resource type="Curve3D" id="Curve3D_2w5on"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="BoxMesh" id="BoxMesh_346fj"]
+
+[sub_resource type="Resource" id="Resource_0sclb"]
+script = ExtResource("5_jw32o")
+node = NodePath("../Telegraph")
+curve = SubResource("Curve3D_2w5on")
+model = SubResource("BoxMesh_346fj")
+
+[sub_resource type="Curve3D" id="Curve3D_sxkr1"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="BoxMesh" id="BoxMesh_fq0cl"]
+
+[sub_resource type="Resource" id="Resource_hwpts"]
+script = ExtResource("5_jw32o")
+node = NodePath("../Lautsprecher")
+curve = SubResource("Curve3D_sxkr1")
+model = SubResource("BoxMesh_fq0cl")
+
+[sub_resource type="Curve3D" id="Curve3D_jyqft"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="BoxMesh" id="BoxMesh_3tgeq"]
+
+[sub_resource type="Resource" id="Resource_c4ay3"]
+script = ExtResource("5_jw32o")
+node = NodePath("../Elektromagnet")
+curve = SubResource("Curve3D_jyqft")
+model = SubResource("BoxMesh_3tgeq")
+
+[sub_resource type="TorusMesh" id="TorusMesh_btbly"]
+
+[sub_resource type="Curve3D" id="Curve3D_346fj"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="BoxMesh" id="BoxMesh_0sclb"]
+
+[sub_resource type="Resource" id="Resource_sxkr1"]
+script = ExtResource("5_jw32o")
+node = NodePath("../Voltasche Säule")
+curve = SubResource("Curve3D_346fj")
+model = SubResource("BoxMesh_0sclb")
+
+[sub_resource type="Curve3D" id="Curve3D_fq0cl"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="BoxMesh" id="BoxMesh_hwpts"]
+
+[sub_resource type="Resource" id="Resource_jyqft"]
+script = ExtResource("5_jw32o")
+node = NodePath("../Dampfmaschine")
+curve = SubResource("Curve3D_fq0cl")
+model = SubResource("BoxMesh_hwpts")
+
+[sub_resource type="Curve3D" id="Curve3D_0sclb"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="BoxMesh" id="BoxMesh_sxkr1"]
+
+[sub_resource type="Resource" id="Resource_fq0cl"]
+script = ExtResource("5_jw32o")
+node = NodePath("../Gasmotor")
+curve = SubResource("Curve3D_0sclb")
+model = SubResource("BoxMesh_sxkr1")
+
+[sub_resource type="Curve3D" id="Curve3D_hwpts"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="BoxMesh" id="BoxMesh_jyqft"]
+
+[sub_resource type="Resource" id="Resource_3tgeq"]
+script = ExtResource("5_jw32o")
+node = NodePath("../Elektromagnet")
+curve = SubResource("Curve3D_hwpts")
+model = SubResource("BoxMesh_jyqft")
+
+[sub_resource type="TorusMesh" id="TorusMesh_vs04g"]
+
+[sub_resource type="Curve3D" id="Curve3D_3tgeq"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="BoxMesh" id="BoxMesh_c4ay3"]
+
+[sub_resource type="Resource" id="Resource_aht7i"]
+script = ExtResource("5_jw32o")
+node = NodePath("../Öl")
+curve = SubResource("Curve3D_3tgeq")
+model = SubResource("BoxMesh_c4ay3")
+
+[sub_resource type="TorusMesh" id="TorusMesh_6ehlx"]
+
+[sub_resource type="Curve3D" id="Curve3D_5jffn"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="BoxMesh" id="BoxMesh_kpo4j"]
+
+[sub_resource type="Resource" id="Resource_4n42c"]
+script = ExtResource("5_jw32o")
+node = NodePath("../Gummi")
+curve = SubResource("Curve3D_5jffn")
+model = SubResource("BoxMesh_kpo4j")
+
+[sub_resource type="TorusMesh" id="TorusMesh_utia5"]
+
+[sub_resource type="Curve3D" id="Curve3D_c5snn"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="BoxMesh" id="BoxMesh_xvtyr"]
+
+[sub_resource type="Resource" id="Resource_u7mjy"]
+script = ExtResource("5_jw32o")
+node = NodePath("../Gummi")
+curve = SubResource("Curve3D_c5snn")
+model = SubResource("BoxMesh_xvtyr")
+
+[sub_resource type="TorusMesh" id="TorusMesh_f7hdo"]
+
+[sub_resource type="Curve3D" id="Curve3D_4yxf6"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="BoxMesh" id="BoxMesh_qta6b"]
+
+[sub_resource type="Resource" id="Resource_x3rx7"]
+script = ExtResource("5_jw32o")
+node = NodePath("../Isoliertes Kabel")
+curve = SubResource("Curve3D_4yxf6")
+model = SubResource("BoxMesh_qta6b")
+
+[sub_resource type="Curve3D" id="Curve3D_6heos"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="BoxMesh" id="BoxMesh_vvnwx"]
+
+[sub_resource type="Resource" id="Resource_btbly"]
+script = ExtResource("5_jw32o")
+node = NodePath("../Bleiakkumulator")
+curve = SubResource("Curve3D_6heos")
+model = SubResource("BoxMesh_vvnwx")
+
+[sub_resource type="TorusMesh" id="TorusMesh_clvyn"]
+
+[sub_resource type="Curve3D" id="Curve3D_vs04g"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="BoxMesh" id="BoxMesh_6ehlx"]
+
+[sub_resource type="Resource" id="Resource_utia5"]
+script = ExtResource("5_jw32o")
+node = NodePath("../Telefon")
+curve = SubResource("Curve3D_vs04g")
+model = SubResource("BoxMesh_6ehlx")
+
+[sub_resource type="Curve3D" id="Curve3D_f7hdo"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="BoxMesh" id="BoxMesh_clvyn"]
+
+[sub_resource type="Resource" id="Resource_d8m2u"]
+script = ExtResource("5_jw32o")
+node = NodePath("../Halbleiterdiode")
+curve = SubResource("Curve3D_f7hdo")
+model = SubResource("BoxMesh_clvyn")
+
+[sub_resource type="Curve3D" id="Curve3D_5psol"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="BoxMesh" id="BoxMesh_m4llh"]
+
+[sub_resource type="Resource" id="Resource_lac6x"]
+script = ExtResource("5_jw32o")
+node = NodePath("../Isoliertes Kabel")
+curve = SubResource("Curve3D_5psol")
+model = SubResource("BoxMesh_m4llh")
+
+[sub_resource type="TorusMesh" id="TorusMesh_d8m2u"]
+
+[sub_resource type="Curve3D" id="Curve3D_c4ay3"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="BoxMesh" id="BoxMesh_aht7i"]
+
+[sub_resource type="Resource" id="Resource_5jffn"]
+script = ExtResource("5_jw32o")
+node = NodePath("../Gasmotor")
+curve = SubResource("Curve3D_c4ay3")
+model = SubResource("BoxMesh_aht7i")
+
+[sub_resource type="Curve3D" id="Curve3D_kpo4j"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="BoxMesh" id="BoxMesh_4n42c"]
+
+[sub_resource type="Resource" id="Resource_c5snn"]
+script = ExtResource("5_jw32o")
+node = NodePath("../Isoliertes Kabel")
+curve = SubResource("Curve3D_kpo4j")
+model = SubResource("BoxMesh_4n42c")
+
+[sub_resource type="Curve3D" id="Curve3D_xvtyr"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="BoxMesh" id="BoxMesh_u7mjy"]
+
+[sub_resource type="Resource" id="Resource_4yxf6"]
+script = ExtResource("5_jw32o")
+node = NodePath("../Elektromagnet")
+curve = SubResource("Curve3D_xvtyr")
+model = SubResource("BoxMesh_u7mjy")
+
+[sub_resource type="TorusMesh" id="TorusMesh_5psol"]
+
+[sub_resource type="Curve3D" id="Curve3D_qta6b"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="BoxMesh" id="BoxMesh_x3rx7"]
+
+[sub_resource type="Resource" id="Resource_6heos"]
+script = ExtResource("5_jw32o")
+node = NodePath("../Transformator")
+curve = SubResource("Curve3D_qta6b")
+model = SubResource("BoxMesh_x3rx7")
+
+[sub_resource type="Curve3D" id="Curve3D_vvnwx"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="BoxMesh" id="BoxMesh_btbly"]
+
+[sub_resource type="Resource" id="Resource_vs04g"]
+script = ExtResource("5_jw32o")
+node = NodePath("../Generator")
+curve = SubResource("Curve3D_vvnwx")
+model = SubResource("BoxMesh_btbly")
+
+[sub_resource type="Curve3D" id="Curve3D_6ehlx"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="BoxMesh" id="BoxMesh_utia5"]
+
+[sub_resource type="Resource" id="Resource_f7hdo"]
+script = ExtResource("5_jw32o")
+node = NodePath("../Halbleiterdiode")
+curve = SubResource("Curve3D_6ehlx")
+model = SubResource("BoxMesh_utia5")
+
+[sub_resource type="Curve3D" id="Curve3D_aht7i"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="BoxMesh" id="BoxMesh_5jffn"]
+
+[sub_resource type="Resource" id="Resource_kpo4j"]
+script = ExtResource("5_jw32o")
+node = NodePath("../Ottomotor")
+curve = SubResource("Curve3D_aht7i")
+model = SubResource("BoxMesh_5jffn")
+
+[sub_resource type="Curve3D" id="Curve3D_4n42c"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="BoxMesh" id="BoxMesh_c5snn"]
+
+[sub_resource type="Resource" id="Resource_xvtyr"]
+script = ExtResource("5_jw32o")
+node = NodePath("../Luftreifen")
+curve = SubResource("Curve3D_4n42c")
+model = SubResource("BoxMesh_c5snn")
+
+[sub_resource type="Curve3D" id="Curve3D_u7mjy"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="BoxMesh" id="BoxMesh_4yxf6"]
+
+[sub_resource type="Resource" id="Resource_qta6b"]
+script = ExtResource("5_jw32o")
+node = NodePath("../Elektromagnet")
+curve = SubResource("Curve3D_u7mjy")
+model = SubResource("BoxMesh_4yxf6")
+
+[sub_resource type="Curve3D" id="Curve3D_x3rx7"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="BoxMesh" id="BoxMesh_6heos"]
+
+[sub_resource type="Resource" id="Resource_vvnwx"]
+script = ExtResource("5_jw32o")
+node = NodePath("../Glass")
+curve = SubResource("Curve3D_x3rx7")
+model = SubResource("BoxMesh_6heos")
+
+[sub_resource type="Curve3D" id="Curve3D_btbly"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="BoxMesh" id="BoxMesh_vs04g"]
+
+[sub_resource type="Resource" id="Resource_6ehlx"]
+script = ExtResource("5_jw32o")
+node = NodePath("../Kathodenstrahlröhre")
+curve = SubResource("Curve3D_btbly")
+model = SubResource("BoxMesh_vs04g")
 
 [node name="Main" type="Node3D" node_paths=PackedStringArray("infoPanel")]
 script = ExtResource("1_50glp")
@@ -91,17 +634,298 @@ offset_bottom = 44.0
 script = ExtResource("1_rgh2o")
 active = null
 
-[node name="Better-telephone" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.889823, 0, 0.456306, 0, 1, 0, -0.456306, 0, 0.889823, -2.24556, 0.000500202, 0.56464)
-material_override = ExtResource("6_50glp")
-mesh = ExtResource("7_jw32o")
+[node name="Dampfmaschine" parent="Nodes" instance=ExtResource("2_jw32o")]
+model = ExtResource("7_hwpts")
 
-[node name="Telegraph" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.597905, 0, 0.801567, 0, 1, 0, -0.801567, 0, 0.597905, 1.63855, 0.0355999, 0.473096)
-material_override = ExtResource("6_50glp")
-mesh = ExtResource("8_vy5pj")
+[node name="Glass" parent="Nodes" instance=ExtResource("2_jw32o")]
+model = ExtResource("8_jyqft")
 
-[node name="Telephone" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.29769, 0.00218285, 1.60379)
-material_override = ExtResource("6_50glp")
-mesh = ExtResource("9_bmxlf")
+[node name="Öl" parent="Nodes" instance=ExtResource("2_jw32o")]
+model = ExtResource("9_3tgeq")
+
+[node name="Voltasche Säule" parent="Nodes" instance=ExtResource("2_jw32o")]
+model = ExtResource("10_c4ay3")
+
+[node name="Elektromagnet" parent="Nodes" instance=ExtResource("2_jw32o")]
+model = ExtResource("11_aht7i")
+dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_grg3l"), SubResource("Resource_h1m7h")])
+
+[node name="Voltasche Säule_Path" parent="Nodes/Elektromagnet" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
+curve = SubResource("Curve3D_bmxlf")
+start = NodePath("../../Voltasche Säule")
+end = NodePath("..")
+model = SubResource("BoxMesh_4kpch")
+
+[node name="Dampfmaschine_Path" parent="Nodes/Elektromagnet" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
+curve = SubResource("Curve3D_frkhe")
+start = NodePath("../../Dampfmaschine")
+end = NodePath("..")
+model = SubResource("BoxMesh_1p5hy")
+
+[node name="Telegraph" parent="Nodes" instance=ExtResource("2_jw32o")]
+model = ExtResource("14_5jffn")
+dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_4kpch"), SubResource("Resource_1p5hy")])
+
+[node name="Elektromagnet_Path" parent="Nodes/Telegraph" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
+curve = SubResource("Curve3D_vy5pj")
+start = NodePath("../../Elektromagnet")
+end = NodePath("..")
+model = SubResource("BoxMesh_bmxlf")
+
+[node name="Voltasche Säule_Path" parent="Nodes/Telegraph" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
+curve = SubResource("Curve3D_grg3l")
+start = NodePath("../../Voltasche Säule")
+end = NodePath("..")
+model = SubResource("BoxMesh_frkhe")
+
+[node name="Glühlampe" parent="Nodes" instance=ExtResource("2_jw32o")]
+model = SubResource("TorusMesh_6heos")
+dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_frkhe"), SubResource("Resource_erwvk")])
+
+[node name="Voltasche Säule_Path" parent="Nodes/Glühlampe" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
+curve = SubResource("Curve3D_4kpch")
+start = NodePath("../../Voltasche Säule")
+end = NodePath("..")
+model = SubResource("BoxMesh_grg3l")
+
+[node name="Glass_Path" parent="Nodes/Glühlampe" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
+curve = SubResource("Curve3D_1p5hy")
+start = NodePath("../../Glass")
+end = NodePath("..")
+model = SubResource("BoxMesh_h1m7h")
+
+[node name="Brenstoffzelle" parent="Nodes" instance=ExtResource("2_jw32o")]
+model = SubResource("TorusMesh_vvnwx")
+dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_2w5on")])
+
+[node name="Voltasche Säule_Path" parent="Nodes/Brenstoffzelle" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
+curve = SubResource("Curve3D_h1m7h")
+start = NodePath("../../Voltasche Säule")
+end = NodePath("..")
+model = SubResource("BoxMesh_erwvk")
+
+[node name="Bleiakkumulator" parent="Nodes" instance=ExtResource("2_jw32o")]
+model = ExtResource("15_kpo4j")
+dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_346fj")])
+
+[node name="Brenstoffzelle_Path" parent="Nodes/Bleiakkumulator" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
+curve = SubResource("Curve3D_erwvk")
+start = NodePath("../../Brenstoffzelle")
+end = NodePath("..")
+model = SubResource("BoxMesh_2w5on")
+
+[node name="Telefon" parent="Nodes" instance=ExtResource("2_jw32o")]
+model = ExtResource("16_4n42c")
+dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_0sclb"), SubResource("Resource_hwpts")])
+
+[node name="Telegraph_Path" parent="Nodes/Telefon" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
+curve = SubResource("Curve3D_2w5on")
+start = NodePath("../../Telegraph")
+end = NodePath("..")
+model = SubResource("BoxMesh_346fj")
+
+[node name="Lautsprecher_Path" parent="Nodes/Telefon" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
+curve = SubResource("Curve3D_sxkr1")
+start = NodePath("../../Lautsprecher")
+end = NodePath("..")
+model = SubResource("BoxMesh_fq0cl")
+
+[node name="Lautsprecher" parent="Nodes" instance=ExtResource("2_jw32o")]
+model = ExtResource("17_c5snn")
+dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_c4ay3")])
+
+[node name="Elektromagnet_Path" parent="Nodes/Lautsprecher" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
+curve = SubResource("Curve3D_jyqft")
+start = NodePath("../../Elektromagnet")
+end = NodePath("..")
+model = SubResource("BoxMesh_3tgeq")
+
+[node name="Gasmotor" parent="Nodes" instance=ExtResource("2_jw32o")]
+model = SubResource("TorusMesh_btbly")
+dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_sxkr1"), SubResource("Resource_jyqft")])
+
+[node name="Voltasche Säule_Path" parent="Nodes/Gasmotor" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
+curve = SubResource("Curve3D_346fj")
+start = NodePath("../../Voltasche Säule")
+end = NodePath("..")
+model = SubResource("BoxMesh_0sclb")
+
+[node name="Dampfmaschine_Path" parent="Nodes/Gasmotor" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
+curve = SubResource("Curve3D_fq0cl")
+start = NodePath("../../Dampfmaschine")
+end = NodePath("..")
+model = SubResource("BoxMesh_hwpts")
+
+[node name="Generator" parent="Nodes" instance=ExtResource("2_jw32o")]
+model = ExtResource("18_xvtyr")
+dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_fq0cl"), SubResource("Resource_3tgeq")])
+
+[node name="Gasmotor_Path" parent="Nodes/Generator" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
+curve = SubResource("Curve3D_0sclb")
+start = NodePath("../../Gasmotor")
+end = NodePath("..")
+model = SubResource("BoxMesh_sxkr1")
+
+[node name="Elektromagnet_Path" parent="Nodes/Generator" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
+curve = SubResource("Curve3D_hwpts")
+start = NodePath("../../Elektromagnet")
+end = NodePath("..")
+model = SubResource("BoxMesh_jyqft")
+
+[node name="Gummi" parent="Nodes" instance=ExtResource("2_jw32o")]
+model = SubResource("TorusMesh_vs04g")
+dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_aht7i")])
+
+[node name="Öl_Path" parent="Nodes/Gummi" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
+curve = SubResource("Curve3D_3tgeq")
+start = NodePath("../../Öl")
+end = NodePath("..")
+model = SubResource("BoxMesh_c4ay3")
+
+[node name="Isoliertes Kabel" parent="Nodes" instance=ExtResource("2_jw32o")]
+model = SubResource("TorusMesh_6ehlx")
+dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_4n42c")])
+
+[node name="Gummi_Path" parent="Nodes/Isoliertes Kabel" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
+curve = SubResource("Curve3D_5jffn")
+start = NodePath("../../Gummi")
+end = NodePath("..")
+model = SubResource("BoxMesh_kpo4j")
+
+[node name="Luftreifen" parent="Nodes" instance=ExtResource("2_jw32o")]
+model = SubResource("TorusMesh_utia5")
+dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_u7mjy")])
+
+[node name="Gummi_Path" parent="Nodes/Luftreifen" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
+curve = SubResource("Curve3D_c5snn")
+start = NodePath("../../Gummi")
+end = NodePath("..")
+model = SubResource("BoxMesh_xvtyr")
+
+[node name="Halbleiterdiode" parent="Nodes" instance=ExtResource("2_jw32o")]
+model = SubResource("TorusMesh_f7hdo")
+dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_x3rx7"), SubResource("Resource_btbly")])
+
+[node name="Isoliertes Kabel_Path" parent="Nodes/Halbleiterdiode" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
+curve = SubResource("Curve3D_4yxf6")
+start = NodePath("../../Isoliertes Kabel")
+end = NodePath("..")
+model = SubResource("BoxMesh_qta6b")
+
+[node name="Bleiakkumulator_Path" parent="Nodes/Halbleiterdiode" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
+curve = SubResource("Curve3D_6heos")
+start = NodePath("../../Bleiakkumulator")
+end = NodePath("..")
+model = SubResource("BoxMesh_vvnwx")
+
+[node name="Vebessertes Telefon" parent="Nodes" instance=ExtResource("2_jw32o")]
+model = SubResource("TorusMesh_clvyn")
+dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_utia5"), SubResource("Resource_d8m2u"), SubResource("Resource_lac6x")])
+
+[node name="Telefon_Path" parent="Nodes/Vebessertes Telefon" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
+curve = SubResource("Curve3D_vs04g")
+start = NodePath("../../Telefon")
+end = NodePath("..")
+model = SubResource("BoxMesh_6ehlx")
+
+[node name="Halbleiterdiode_Path" parent="Nodes/Vebessertes Telefon" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
+curve = SubResource("Curve3D_f7hdo")
+start = NodePath("../../Halbleiterdiode")
+end = NodePath("..")
+model = SubResource("BoxMesh_clvyn")
+
+[node name="Isoliertes Kabel_Path" parent="Nodes/Vebessertes Telefon" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
+curve = SubResource("Curve3D_5psol")
+start = NodePath("../../Isoliertes Kabel")
+end = NodePath("..")
+model = SubResource("BoxMesh_m4llh")
+
+[node name="Ottomotor" parent="Nodes" instance=ExtResource("2_jw32o")]
+model = SubResource("TorusMesh_d8m2u")
+dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_5jffn")])
+
+[node name="Gasmotor_Path" parent="Nodes/Ottomotor" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
+curve = SubResource("Curve3D_c4ay3")
+start = NodePath("../../Gasmotor")
+end = NodePath("..")
+model = SubResource("BoxMesh_aht7i")
+
+[node name="Transformator" parent="Nodes" instance=ExtResource("2_jw32o")]
+model = ExtResource("19_u7mjy")
+dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_c5snn"), SubResource("Resource_4yxf6")])
+
+[node name="Isoliertes Kabel_Path" parent="Nodes/Transformator" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
+curve = SubResource("Curve3D_kpo4j")
+start = NodePath("../../Isoliertes Kabel")
+end = NodePath("..")
+model = SubResource("BoxMesh_4n42c")
+
+[node name="Elektromagnet_Path" parent="Nodes/Transformator" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
+curve = SubResource("Curve3D_xvtyr")
+start = NodePath("../../Elektromagnet")
+end = NodePath("..")
+model = SubResource("BoxMesh_u7mjy")
+
+[node name="Strom-Kraftwerk" parent="Nodes" instance=ExtResource("2_jw32o")]
+model = SubResource("TorusMesh_5psol")
+dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_6heos"), SubResource("Resource_vs04g"), SubResource("Resource_f7hdo")])
+
+[node name="Transformator_Path" parent="Nodes/Strom-Kraftwerk" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
+curve = SubResource("Curve3D_qta6b")
+start = NodePath("../../Transformator")
+end = NodePath("..")
+model = SubResource("BoxMesh_x3rx7")
+
+[node name="Generator_Path" parent="Nodes/Strom-Kraftwerk" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
+curve = SubResource("Curve3D_vvnwx")
+start = NodePath("../../Generator")
+end = NodePath("..")
+model = SubResource("BoxMesh_btbly")
+
+[node name="Halbleiterdiode_Path" parent="Nodes/Strom-Kraftwerk" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
+curve = SubResource("Curve3D_6ehlx")
+start = NodePath("../../Halbleiterdiode")
+end = NodePath("..")
+model = SubResource("BoxMesh_utia5")
+
+[node name="Automobiel" parent="Nodes" instance=ExtResource("2_jw32o")]
+model = ExtResource("20_4yxf6")
+dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_kpo4j"), SubResource("Resource_xvtyr")])
+
+[node name="Ottomotor_Path" parent="Nodes/Automobiel" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
+curve = SubResource("Curve3D_aht7i")
+start = NodePath("../../Ottomotor")
+end = NodePath("..")
+model = SubResource("BoxMesh_5jffn")
+
+[node name="Luftreifen_Path" parent="Nodes/Automobiel" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
+curve = SubResource("Curve3D_4n42c")
+start = NodePath("../../Luftreifen")
+end = NodePath("..")
+model = SubResource("BoxMesh_c5snn")
+
+[node name="Kathodenstrahlröhre" parent="Nodes" instance=ExtResource("2_jw32o")]
+model = ExtResource("21_qta6b")
+dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_qta6b"), SubResource("Resource_vvnwx")])
+
+[node name="Elektromagnet_Path" parent="Nodes/Kathodenstrahlröhre" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
+curve = SubResource("Curve3D_u7mjy")
+start = NodePath("../../Elektromagnet")
+end = NodePath("..")
+model = SubResource("BoxMesh_4yxf6")
+
+[node name="Glass_Path" parent="Nodes/Kathodenstrahlröhre" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
+curve = SubResource("Curve3D_x3rx7")
+start = NodePath("../../Glass")
+end = NodePath("..")
+model = SubResource("BoxMesh_6heos")
+
+[node name="Elektronenröhre" parent="Nodes" instance=ExtResource("2_jw32o")]
+model = ExtResource("22_x3rx7")
+dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_6ehlx")])
+
+[node name="Kathodenstrahlröhre_Path" parent="Nodes/Elektronenröhre" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
+curve = SubResource("Curve3D_btbly")
+start = NodePath("../../Kathodenstrahlröhre")
+end = NodePath("..")
+model = SubResource("BoxMesh_vs04g")
