@@ -45,7 +45,7 @@ glow_enabled = true
 
 [sub_resource type="Curve3D" id="Curve3D_bmxlf"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -11.6118, 0, -4.0552, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
@@ -60,7 +60,7 @@ model = SubResource("BoxMesh_4kpch")
 
 [sub_resource type="Curve3D" id="Curve3D_frkhe"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -17.1708, 0, -5.09069, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
@@ -75,7 +75,7 @@ model = SubResource("BoxMesh_1p5hy")
 
 [sub_resource type="Curve3D" id="Curve3D_vy5pj"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -6.3743, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
@@ -90,7 +90,7 @@ model = SubResource("BoxMesh_bmxlf")
 
 [sub_resource type="Curve3D" id="Curve3D_grg3l"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -17.9861, 0, -4.0552, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
@@ -107,7 +107,7 @@ model = SubResource("BoxMesh_frkhe")
 
 [sub_resource type="Curve3D" id="Curve3D_4kpch"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -20.1713, 0, -7.03177, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
@@ -122,7 +122,7 @@ model = SubResource("BoxMesh_grg3l")
 
 [sub_resource type="Curve3D" id="Curve3D_1p5hy"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -25.7303, 0, 0.0255201, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
@@ -139,7 +139,7 @@ model = SubResource("BoxMesh_h1m7h")
 
 [sub_resource type="Curve3D" id="Curve3D_h1m7h"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -27.7047, 0, -7.41869, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
@@ -154,7 +154,7 @@ model = SubResource("BoxMesh_erwvk")
 
 [sub_resource type="Curve3D" id="Curve3D_erwvk"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -11.174, 0, 3.79043, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
@@ -169,7 +169,7 @@ model = SubResource("BoxMesh_2w5on")
 
 [sub_resource type="Curve3D" id="Curve3D_2w5on"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -25.5109, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
@@ -184,7 +184,7 @@ model = SubResource("BoxMesh_346fj")
 
 [sub_resource type="Curve3D" id="Curve3D_sxkr1"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -2.47859, 0, -4.12964, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
@@ -199,7 +199,7 @@ model = SubResource("BoxMesh_fq0cl")
 
 [sub_resource type="Curve3D" id="Curve3D_jyqft"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -29.4066, 0, 4.12964, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
@@ -231,7 +231,7 @@ model = SubResource("BoxMesh_0sclb")
 
 [sub_resource type="Curve3D" id="Curve3D_fq0cl"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -7.68501, 0, -5.09069, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
@@ -246,7 +246,7 @@ model = SubResource("BoxMesh_hwpts")
 
 [sub_resource type="Curve3D" id="Curve3D_0sclb"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -12.8921, 0, -8.90251, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
@@ -261,7 +261,7 @@ model = SubResource("BoxMesh_sxkr1")
 
 [sub_resource type="Curve3D" id="Curve3D_hwpts"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -3.4063, 0, -8.90251, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
@@ -278,7 +278,7 @@ model = SubResource("BoxMesh_jyqft")
 
 [sub_resource type="Curve3D" id="Curve3D_3tgeq"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -35.1705, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
@@ -295,7 +295,7 @@ model = SubResource("BoxMesh_c4ay3")
 
 [sub_resource type="Curve3D" id="Curve3D_5jffn"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -4.7972, 0, -3.70693, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
@@ -312,7 +312,7 @@ model = SubResource("BoxMesh_kpo4j")
 
 [sub_resource type="Curve3D" id="Curve3D_c5snn"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -4.9625, 0, -6.18864, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
@@ -329,7 +329,7 @@ model = SubResource("BoxMesh_xvtyr")
 
 [sub_resource type="Curve3D" id="Curve3D_4yxf6"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -12.5399, 0, 8.5189, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
@@ -344,7 +344,7 @@ model = SubResource("BoxMesh_qta6b")
 
 [sub_resource type="Curve3D" id="Curve3D_6heos"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -8.0699, 0, 4.38503, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
@@ -359,7 +359,7 @@ model = SubResource("BoxMesh_vvnwx")
 
 [sub_resource type="Curve3D" id="Curve3D_vs04g"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -3.0472, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
@@ -374,7 +374,7 @@ model = SubResource("BoxMesh_6ehlx")
 
 [sub_resource type="Curve3D" id="Curve3D_f7hdo"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0.404377, 0, -4.81197, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0.4044, 0, -4.81197, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
@@ -389,7 +389,7 @@ model = SubResource("BoxMesh_clvyn")
 
 [sub_resource type="Curve3D" id="Curve3D_5psol"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -12.1355, 0, 3.70693, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
@@ -406,7 +406,7 @@ model = SubResource("BoxMesh_m4llh")
 
 [sub_resource type="Curve3D" id="Curve3D_c4ay3"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -51.1874, 0, -3.2349, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
@@ -421,7 +421,7 @@ model = SubResource("BoxMesh_aht7i")
 
 [sub_resource type="Curve3D" id="Curve3D_kpo4j"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -26.9231, 0, 5.72467, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
@@ -436,7 +436,7 @@ model = SubResource("BoxMesh_4n42c")
 
 [sub_resource type="Curve3D" id="Curve3D_xvtyr"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -49.72, 0, 2.01774, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
@@ -453,7 +453,7 @@ model = SubResource("BoxMesh_u7mjy")
 
 [sub_resource type="Curve3D" id="Curve3D_qta6b"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -3.42, 0, -0.28499, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
@@ -468,7 +468,7 @@ model = SubResource("BoxMesh_x3rx7")
 
 [sub_resource type="Curve3D" id="Curve3D_vvnwx"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -49.7337, 0, 10.6353, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
@@ -483,7 +483,7 @@ model = SubResource("BoxMesh_btbly")
 
 [sub_resource type="Curve3D" id="Curve3D_6ehlx"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -17.8032, 0, -3.07922, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
@@ -498,7 +498,7 @@ model = SubResource("BoxMesh_utia5")
 
 [sub_resource type="Curve3D" id="Curve3D_aht7i"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -15.9304, 0, -2.63471, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
@@ -513,7 +513,7 @@ model = SubResource("BoxMesh_5jffn")
 
 [sub_resource type="Curve3D" id="Curve3D_4n42c"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -34.6698, 0, 0.31903, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
@@ -528,7 +528,7 @@ model = SubResource("BoxMesh_c5snn")
 
 [sub_resource type="Curve3D" id="Curve3D_u7mjy"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -64.2737, 0, 5.94073, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
@@ -543,7 +543,7 @@ model = SubResource("BoxMesh_4yxf6")
 
 [sub_resource type="Curve3D" id="Curve3D_x3rx7"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -81.4445, 0, 8.94282, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
@@ -558,7 +558,7 @@ model = SubResource("BoxMesh_6heos")
 
 [sub_resource type="Curve3D" id="Curve3D_btbly"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -15.2925, 0, -1.0394, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
@@ -573,7 +573,7 @@ model = SubResource("BoxMesh_vs04g")
 
 [sub_resource type="Curve3D" id="Curve3D_utia5"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -8.283, 0, 0.45948, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
@@ -588,7 +588,7 @@ model = SubResource("BoxMesh_f7hdo")
 
 [sub_resource type="Curve3D" id="Curve3D_clvyn"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -31.273, 0, 2.23493, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
@@ -605,7 +605,7 @@ model = SubResource("BoxMesh_d8m2u")
 
 [sub_resource type="Curve3D" id="Curve3D_d8m2u"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -10.636, 0, 0.43487, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
@@ -620,7 +620,7 @@ model = SubResource("BoxMesh_5psol")
 
 [sub_resource type="Curve3D" id="Curve3D_lac6x"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -0.547287, 0, -7.13626, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -0.547012, 0, -7.13626, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
@@ -635,7 +635,7 @@ model = SubResource("BoxMesh_hpjjw")
 
 [sub_resource type="Curve3D" id="Curve3D_lfh1j"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -23.537, 0, -5.36081, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
@@ -652,7 +652,7 @@ model = SubResource("BoxMesh_7sj7i")
 
 [sub_resource type="Curve3D" id="Curve3D_3133c"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -9.556, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
@@ -667,7 +667,7 @@ model = SubResource("BoxMesh_js5gh")
 
 [sub_resource type="Curve3D" id="Curve3D_yisvs"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -67.8022, 0, -1.73275, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
@@ -692,6 +692,7 @@ shadow_enabled = true
 environment = SubResource("Environment_kln2b")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
+visible = false
 use_collision = true
 size = Vector3(1000, 0.001, 1000)
 material = SubResource("StandardMaterial3D_r150o")
@@ -748,17 +749,21 @@ active = null
 [node name="Dampfmaschine" parent="Nodes" instance=ExtResource("2_jw32o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5.09069)
 model = ExtResource("7_hwpts")
+active = true
 
 [node name="Glass" parent="Nodes" instance=ExtResource("2_jw32o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.00209)
 model = ExtResource("8_jyqft")
+active = true
 
 [node name="Öl" parent="Nodes" instance=ExtResource("2_jw32o")]
 model = ExtResource("9_3tgeq")
+active = true
 
 [node name="Voltasche Säule" parent="Nodes" instance=ExtResource("2_jw32o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.55902, 0, -4.0552)
 model = ExtResource("10_c4ay3")
+active = true
 
 [node name="Elektromagnet" parent="Nodes" instance=ExtResource("2_jw32o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.1708, 0, 0)
