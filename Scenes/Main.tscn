@@ -8,20 +8,21 @@
 [ext_resource type="PackedScene" uid="uid://bv557cuctre4h" path="res://Scenes/DependencyPath.tscn" id="6_50glp"]
 [ext_resource type="Script" uid="uid://dl2kb8yiw22y7" path="res://Scripts/InfoPanel.gd" id="6_jw32o"]
 [ext_resource type="Script" uid="uid://bl1nqlm3g42qa" path="res://Scenes/CloseButton.gd" id="6_v1gob"]
-[ext_resource type="ArrayMesh" uid="uid://dm02m4viyhlye" path="res://Meshes/steam_engine.tres" id="7_hwpts"]
-[ext_resource type="ArrayMesh" uid="uid://mnou86os3dap" path="res://Meshes/glass.tres" id="8_jyqft"]
-[ext_resource type="ArrayMesh" uid="uid://bavmfbmh30xte" path="res://Meshes/oil.tres" id="9_3tgeq"]
-[ext_resource type="ArrayMesh" uid="uid://dqiwmxs6e8uoi" path="res://Meshes/voltaic_collumn.tres" id="10_c4ay3"]
-[ext_resource type="ArrayMesh" uid="uid://dalmvqd1j303a" path="res://Meshes/electromagnet.tres" id="11_aht7i"]
-[ext_resource type="ArrayMesh" uid="uid://dy4q6cna42buw" path="res://Meshes/telegraph.tres" id="14_5jffn"]
-[ext_resource type="ArrayMesh" uid="uid://dxrspmu464fq5" path="res://Meshes/powercell.tres" id="15_kpo4j"]
-[ext_resource type="ArrayMesh" uid="uid://dvspbjrssu32g" path="res://Meshes/telephone.tres" id="16_4n42c"]
-[ext_resource type="ArrayMesh" uid="uid://cx34ev5thp63f" path="res://Meshes/loudespeaker.tres" id="17_c5snn"]
-[ext_resource type="ArrayMesh" uid="uid://bs7446jsc1ckg" path="res://Meshes/generator.tres" id="18_xvtyr"]
-[ext_resource type="ArrayMesh" uid="uid://bpyec1ef48eqq" path="res://Meshes/transformer.tres" id="19_u7mjy"]
-[ext_resource type="ArrayMesh" uid="uid://526q4fhs8c0s" path="res://Meshes/car.tres" id="20_4yxf6"]
-[ext_resource type="ArrayMesh" uid="uid://cb3e8hngkgv72" path="res://Meshes/cathode-tube.tres" id="21_qta6b"]
-[ext_resource type="ArrayMesh" uid="uid://b0k5a5sfwmvsh" path="res://Meshes/magnetron.tres" id="22_x3rx7"]
+[ext_resource type="ArrayMesh" uid="uid://bh8hl6ddt2oon" path="res://Meshes/steam_engine.tres" id="7_hwpts"]
+[ext_resource type="ArrayMesh" uid="uid://l36q6nfjx2d4" path="res://Meshes/better-telephone.tres" id="7_jw32o"]
+[ext_resource type="ArrayMesh" uid="uid://dcoaluliy2u0c" path="res://Meshes/glass.tres" id="8_jyqft"]
+[ext_resource type="ArrayMesh" uid="uid://csi8w1ui1qctl" path="res://Meshes/oil.tres" id="9_3tgeq"]
+[ext_resource type="ArrayMesh" uid="uid://dkkibf1lp16ki" path="res://Meshes/voltaic_collumn.tres" id="10_c4ay3"]
+[ext_resource type="ArrayMesh" uid="uid://0inxydq4gjpm" path="res://Meshes/electromagnet.tres" id="11_aht7i"]
+[ext_resource type="ArrayMesh" uid="uid://d38tp06wbcicu" path="res://Meshes/telegraph.tres" id="14_5jffn"]
+[ext_resource type="ArrayMesh" uid="uid://vt4tkj0jlbsx" path="res://Meshes/powercell.tres" id="15_kpo4j"]
+[ext_resource type="ArrayMesh" uid="uid://gn8226bsbp57" path="res://Meshes/telephone.tres" id="16_4n42c"]
+[ext_resource type="ArrayMesh" uid="uid://bhc1pjkia3ul2" path="res://Meshes/loudespeaker.tres" id="17_c5snn"]
+[ext_resource type="ArrayMesh" uid="uid://btwj573s15elc" path="res://Meshes/generator.tres" id="18_xvtyr"]
+[ext_resource type="ArrayMesh" uid="uid://dnmvm3nw8phlj" path="res://Meshes/transformer.tres" id="19_u7mjy"]
+[ext_resource type="ArrayMesh" uid="uid://ikdhots72o23" path="res://Meshes/car.tres" id="20_4yxf6"]
+[ext_resource type="ArrayMesh" uid="uid://b5tryd530fxg6" path="res://Meshes/cathode-tube.tres" id="21_qta6b"]
+[ext_resource type="ArrayMesh" uid="uid://ddle56s7wa1eu" path="res://Meshes/magnetron.tres" id="22_x3rx7"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_r150o"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -352,8 +353,6 @@ script = ExtResource("5_jw32o")
 node = NodePath("../Bleiakkumulator")
 curve = SubResource("Curve3D_6heos")
 model = SubResource("BoxMesh_vvnwx")
-
-[sub_resource type="TorusMesh" id="TorusMesh_clvyn"]
 
 [sub_resource type="Curve3D" id="Curve3D_vs04g"]
 _data = {
@@ -819,7 +818,7 @@ end = NodePath("..")
 model = SubResource("BoxMesh_vvnwx")
 
 [node name="Vebessertes Telefon" parent="Nodes" instance=ExtResource("2_jw32o")]
-model = SubResource("TorusMesh_clvyn")
+model = ExtResource("7_jw32o")
 dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_utia5"), SubResource("Resource_d8m2u"), SubResource("Resource_lac6x")])
 
 [node name="Telefon_Path" parent="Nodes/Vebessertes Telefon" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
