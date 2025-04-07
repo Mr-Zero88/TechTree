@@ -1,14 +1,13 @@
-[gd_scene load_steps=24 format=3 uid="uid://coarme3bsgscw"]
+[gd_scene load_steps=26 format=3 uid="uid://coarme3bsgscw"]
 
+[ext_resource type="Script" uid="uid://1n7dl2jsghkc" path="res://Scripts/Main.gd" id="1_50glp"]
 [ext_resource type="Script" uid="uid://dg0tw4c1yldw7" path="res://Scripts/Camera3d.gd" id="1_pbw6q"]
 [ext_resource type="Script" uid="uid://6l363iepftwb" path="res://Scripts/TechNode.gd" id="1_rgh2o"]
 [ext_resource type="PackedScene" uid="uid://ds1ubnrgv865p" path="res://Scenes/TechNode.tscn" id="2_jw32o"]
 [ext_resource type="Script" uid="uid://75thxom5gfp0" path="res://Scripts/Dependency.gd" id="5_jw32o"]
 [ext_resource type="PackedScene" uid="uid://bv557cuctre4h" path="res://Scenes/DependencyPath.tscn" id="6_50glp"]
-
-[sub_resource type="GDScript" id="GDScript_idj7w"]
-script/source = "extends Node3D
-"
+[ext_resource type="Script" uid="uid://dl2kb8yiw22y7" path="res://Scenes/InfoPanel.gd" id="6_jw32o"]
+[ext_resource type="Script" uid="uid://bl1nqlm3g42qa" path="res://Scenes/CloseButton.gd" id="6_v1gob"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_r150o"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -81,8 +80,9 @@ node = NodePath("../TechNode2")
 curve = SubResource("Curve3D_vy5pj")
 model = SubResource("BoxMesh_bmxlf")
 
-[node name="Main" type="Node3D"]
-script = SubResource("GDScript_idj7w")
+[node name="Main" type="Node3D" node_paths=PackedStringArray("infoPanel")]
+script = ExtResource("1_50glp")
+infoPanel = NodePath("CenterContainer/InfoPanel")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
@@ -113,12 +113,14 @@ active = null
 [node name="TechNode" parent="Nodes" instance=ExtResource("2_jw32o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.11626, 1.53712, 0.0317898)
 model = SubResource("TorusMesh_jw32o")
+unlockText = "Test1"
 distance = 2.0
 active = true
 
 [node name="TechNode2" parent="Nodes" instance=ExtResource("2_jw32o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.6105, 2.73341, -0.0389042)
 model = SubResource("TorusMesh_pbw6q")
+unlockText = "Test2"
 distance = 2.0
 active = null
 dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_vy5pj")])
@@ -132,6 +134,7 @@ model = SubResource("BoxMesh_50glp")
 [node name="TechNode3" parent="Nodes" instance=ExtResource("2_jw32o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5674, 3.31522, 7.85289)
 model = SubResource("TorusMesh_v1gob")
+unlockText = "Test3"
 distance = 2.0
 active = null
 dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_50glp"), SubResource("Resource_4kpch")])
@@ -147,3 +150,30 @@ curve = SubResource("Curve3D_vy5pj")
 start = NodePath("../../TechNode2")
 end = NodePath("..")
 model = SubResource("BoxMesh_bmxlf")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="InfoPanel" type="Panel" parent="CenterContainer"]
+custom_minimum_size = Vector2(400, 300)
+layout_mode = 2
+script = ExtResource("6_jw32o")
+
+[node name="Button" type="Button" parent="CenterContainer/InfoPanel"]
+offset_left = 361.0
+offset_top = 6.0
+offset_right = 393.0
+offset_bottom = 37.0
+text = "X"
+script = ExtResource("6_v1gob")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CenterContainer/InfoPanel"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 43.0
+offset_right = 391.0
+offset_bottom = 294.0

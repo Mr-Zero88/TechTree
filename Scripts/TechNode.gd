@@ -57,6 +57,8 @@ func _ready() -> void:
 		completeCounter += 1;
 		if(completeCounter == dependencies.size()):
 			active = true
+			var main: Main = find_parent("Main");
+			main.infoPanel.show.emit(unlockText)
 	)
 
 func _init() -> void:
