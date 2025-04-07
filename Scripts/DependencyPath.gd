@@ -69,10 +69,10 @@ func _ready() -> void:
 	follower.progress = start.distance
 	length = self.curve.get_baked_length()
 	start.positionChanged.connect(func (nodePosition):
-		curve.set_point_position(0, to_local(nodePosition))
+		curve.set_point_position(0, to_local(start.position))
 	)
 	end.positionChanged.connect(func (nodePosition):
-		curve.set_point_position(0, to_local(nodePosition))
+		curve.set_point_position(0, to_local(start.position))
 	)
 	$PathFollow3D/MeshInstance3D.visible = start.active
 	start.activeChanged.connect(func(activ):
