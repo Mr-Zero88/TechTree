@@ -19,6 +19,7 @@ signal pathChanged(dependency: Dependency, oldPath: Path3D, path: Path3D)
 @export var model: Mesh = null:
 	set(value):
 		model = value
+		model.size = Vector3(0.5, 0.5, 0.5)
 		modelChanged.emit(self, value)
 var name: String = "":
 	set(value):

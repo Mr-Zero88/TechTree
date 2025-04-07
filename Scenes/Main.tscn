@@ -15,10 +15,12 @@
 [ext_resource type="ArrayMesh" uid="uid://dkkibf1lp16ki" path="res://Meshes/voltaic_collumn.tres" id="10_c4ay3"]
 [ext_resource type="ArrayMesh" uid="uid://0inxydq4gjpm" path="res://Meshes/electromagnet.tres" id="11_aht7i"]
 [ext_resource type="ArrayMesh" uid="uid://d38tp06wbcicu" path="res://Meshes/telegraph.tres" id="14_5jffn"]
+[ext_resource type="Material" uid="uid://jw37wthnmo2x" path="res://Textures/global_inaktiv.material" id="15_5jffn"]
 [ext_resource type="ArrayMesh" uid="uid://vt4tkj0jlbsx" path="res://Meshes/powercell.tres" id="15_kpo4j"]
 [ext_resource type="ArrayMesh" uid="uid://gn8226bsbp57" path="res://Meshes/telephone.tres" id="16_4n42c"]
 [ext_resource type="ArrayMesh" uid="uid://bhc1pjkia3ul2" path="res://Meshes/loudespeaker.tres" id="17_c5snn"]
 [ext_resource type="ArrayMesh" uid="uid://btwj573s15elc" path="res://Meshes/generator.tres" id="18_xvtyr"]
+[ext_resource type="ArrayMesh" uid="uid://ri0yxa14ygm6" path="res://Meshes/motor.tres" id="19_kpo4j"]
 [ext_resource type="ArrayMesh" uid="uid://dnmvm3nw8phlj" path="res://Meshes/transformer.tres" id="19_u7mjy"]
 [ext_resource type="ArrayMesh" uid="uid://ikdhots72o23" path="res://Meshes/car.tres" id="20_4yxf6"]
 [ext_resource type="ArrayMesh" uid="uid://b5tryd530fxg6" path="res://Meshes/cathode-tube.tres" id="21_qta6b"]
@@ -45,12 +47,13 @@ glow_enabled = true
 
 [sub_resource type="Curve3D" id="Curve3D_bmxlf"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -11.6118, 0, -0.692, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -11.6111, -0.014812, -0.68349, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
 [sub_resource type="BoxMesh" id="BoxMesh_4kpch"]
+size = Vector3(0.5, 0.5, 0.5)
 
 [sub_resource type="Resource" id="Resource_grg3l"]
 script = ExtResource("5_jw32o")
@@ -60,12 +63,13 @@ model = SubResource("BoxMesh_4kpch")
 
 [sub_resource type="Curve3D" id="Curve3D_frkhe"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -17.1708, 0, -1.72749, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -17.1701, -0.014812, -1.71898, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
 [sub_resource type="BoxMesh" id="BoxMesh_1p5hy"]
+size = Vector3(0.5, 0.5, 0.5)
 
 [sub_resource type="Resource" id="Resource_h1m7h"]
 script = ExtResource("5_jw32o")
@@ -75,12 +79,13 @@ model = SubResource("BoxMesh_1p5hy")
 
 [sub_resource type="Curve3D" id="Curve3D_vy5pj"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -6.3743, 0, -3.3632, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -6.375, 0.014812, -3.37171, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
 [sub_resource type="BoxMesh" id="BoxMesh_bmxlf"]
+size = Vector3(0.5, 0.5, 0.5)
 
 [sub_resource type="Resource" id="Resource_4kpch"]
 script = ExtResource("5_jw32o")
@@ -96,6 +101,7 @@ _data = {
 point_count = 2
 
 [sub_resource type="BoxMesh" id="BoxMesh_frkhe"]
+size = Vector3(0.5, 0.5, 0.5)
 
 [sub_resource type="Resource" id="Resource_1p5hy"]
 script = ExtResource("5_jw32o")
@@ -104,6 +110,7 @@ curve = SubResource("Curve3D_grg3l")
 model = SubResource("BoxMesh_frkhe")
 
 [sub_resource type="TorusMesh" id="TorusMesh_6heos"]
+material = ExtResource("15_5jffn")
 
 [sub_resource type="Curve3D" id="Curve3D_4kpch"]
 _data = {
@@ -113,6 +120,7 @@ _data = {
 point_count = 2
 
 [sub_resource type="BoxMesh" id="BoxMesh_grg3l"]
+size = Vector3(0.5, 0.5, 0.5)
 
 [sub_resource type="Resource" id="Resource_frkhe"]
 script = ExtResource("5_jw32o")
@@ -128,6 +136,7 @@ _data = {
 point_count = 2
 
 [sub_resource type="BoxMesh" id="BoxMesh_h1m7h"]
+size = Vector3(0.5, 0.5, 0.5)
 
 [sub_resource type="Resource" id="Resource_erwvk"]
 script = ExtResource("5_jw32o")
@@ -136,6 +145,7 @@ curve = SubResource("Curve3D_1p5hy")
 model = SubResource("BoxMesh_h1m7h")
 
 [sub_resource type="TorusMesh" id="TorusMesh_vvnwx"]
+material = ExtResource("15_5jffn")
 
 [sub_resource type="Curve3D" id="Curve3D_h1m7h"]
 _data = {
@@ -145,6 +155,7 @@ _data = {
 point_count = 2
 
 [sub_resource type="BoxMesh" id="BoxMesh_erwvk"]
+size = Vector3(0.5, 0.5, 0.5)
 
 [sub_resource type="Resource" id="Resource_2w5on"]
 script = ExtResource("5_jw32o")
@@ -160,6 +171,7 @@ _data = {
 point_count = 2
 
 [sub_resource type="BoxMesh" id="BoxMesh_2w5on"]
+size = Vector3(0.5, 0.5, 0.5)
 
 [sub_resource type="Resource" id="Resource_346fj"]
 script = ExtResource("5_jw32o")
@@ -175,6 +187,7 @@ _data = {
 point_count = 2
 
 [sub_resource type="BoxMesh" id="BoxMesh_346fj"]
+size = Vector3(0.5, 0.5, 0.5)
 
 [sub_resource type="Resource" id="Resource_0sclb"]
 script = ExtResource("5_jw32o")
@@ -190,6 +203,7 @@ _data = {
 point_count = 2
 
 [sub_resource type="BoxMesh" id="BoxMesh_fq0cl"]
+size = Vector3(0.5, 0.5, 0.5)
 
 [sub_resource type="Resource" id="Resource_hwpts"]
 script = ExtResource("5_jw32o")
@@ -199,20 +213,19 @@ model = SubResource("BoxMesh_fq0cl")
 
 [sub_resource type="Curve3D" id="Curve3D_jyqft"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -29.6688, 0, 0.76644, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -29.6695, 0.014812, 0.75793, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
 [sub_resource type="BoxMesh" id="BoxMesh_3tgeq"]
+size = Vector3(0.5, 0.5, 0.5)
 
 [sub_resource type="Resource" id="Resource_c4ay3"]
 script = ExtResource("5_jw32o")
 node = NodePath("../Elektromagnet")
 curve = SubResource("Curve3D_jyqft")
 model = SubResource("BoxMesh_3tgeq")
-
-[sub_resource type="TorusMesh" id="TorusMesh_btbly"]
 
 [sub_resource type="Curve3D" id="Curve3D_346fj"]
 _data = {
@@ -221,13 +234,14 @@ _data = {
 }
 point_count = 2
 
-[sub_resource type="BoxMesh" id="BoxMesh_0sclb"]
+[sub_resource type="BoxMesh" id="BoxMesh_lac6x"]
+size = Vector3(0.5, 0.5, 0.5)
 
 [sub_resource type="Resource" id="Resource_sxkr1"]
 script = ExtResource("5_jw32o")
 node = NodePath("../Voltasche Säule")
 curve = SubResource("Curve3D_346fj")
-model = SubResource("BoxMesh_0sclb")
+model = SubResource("BoxMesh_lac6x")
 
 [sub_resource type="Curve3D" id="Curve3D_fq0cl"]
 _data = {
@@ -237,6 +251,7 @@ _data = {
 point_count = 2
 
 [sub_resource type="BoxMesh" id="BoxMesh_hwpts"]
+size = Vector3(0.5, 0.5, 0.5)
 
 [sub_resource type="Resource" id="Resource_jyqft"]
 script = ExtResource("5_jw32o")
@@ -252,6 +267,7 @@ _data = {
 point_count = 2
 
 [sub_resource type="BoxMesh" id="BoxMesh_sxkr1"]
+size = Vector3(0.5, 0.5, 0.5)
 
 [sub_resource type="Resource" id="Resource_fq0cl"]
 script = ExtResource("5_jw32o")
@@ -261,12 +277,13 @@ model = SubResource("BoxMesh_sxkr1")
 
 [sub_resource type="Curve3D" id="Curve3D_hwpts"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -3.4063, 0, 3.8879, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -3.407, 0.014812, 3.87939, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
 [sub_resource type="BoxMesh" id="BoxMesh_jyqft"]
+size = Vector3(0.5, 0.5, 0.5)
 
 [sub_resource type="Resource" id="Resource_3tgeq"]
 script = ExtResource("5_jw32o")
@@ -275,15 +292,17 @@ curve = SubResource("Curve3D_hwpts")
 model = SubResource("BoxMesh_jyqft")
 
 [sub_resource type="TorusMesh" id="TorusMesh_vs04g"]
+material = ExtResource("15_5jffn")
 
 [sub_resource type="Curve3D" id="Curve3D_3tgeq"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -35.1705, 0, -5.39046, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -35.1711, 0.0113837, -5.397, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
 [sub_resource type="BoxMesh" id="BoxMesh_c4ay3"]
+size = Vector3(0.5, 0.5, 0.5)
 
 [sub_resource type="Resource" id="Resource_aht7i"]
 script = ExtResource("5_jw32o")
@@ -292,6 +311,7 @@ curve = SubResource("Curve3D_3tgeq")
 model = SubResource("BoxMesh_c4ay3")
 
 [sub_resource type="TorusMesh" id="TorusMesh_6ehlx"]
+material = ExtResource("15_5jffn")
 
 [sub_resource type="Curve3D" id="Curve3D_5jffn"]
 _data = {
@@ -301,6 +321,7 @@ _data = {
 point_count = 2
 
 [sub_resource type="BoxMesh" id="BoxMesh_kpo4j"]
+size = Vector3(0.5, 0.5, 0.5)
 
 [sub_resource type="Resource" id="Resource_4n42c"]
 script = ExtResource("5_jw32o")
@@ -309,6 +330,7 @@ curve = SubResource("Curve3D_5jffn")
 model = SubResource("BoxMesh_kpo4j")
 
 [sub_resource type="TorusMesh" id="TorusMesh_utia5"]
+material = ExtResource("15_5jffn")
 
 [sub_resource type="Curve3D" id="Curve3D_c5snn"]
 _data = {
@@ -318,6 +340,7 @@ _data = {
 point_count = 2
 
 [sub_resource type="BoxMesh" id="BoxMesh_xvtyr"]
+size = Vector3(0.5, 0.5, 0.5)
 
 [sub_resource type="Resource" id="Resource_u7mjy"]
 script = ExtResource("5_jw32o")
@@ -326,6 +349,7 @@ curve = SubResource("Curve3D_c5snn")
 model = SubResource("BoxMesh_xvtyr")
 
 [sub_resource type="TorusMesh" id="TorusMesh_f7hdo"]
+material = ExtResource("15_5jffn")
 
 [sub_resource type="Curve3D" id="Curve3D_4yxf6"]
 _data = {
@@ -335,6 +359,7 @@ _data = {
 point_count = 2
 
 [sub_resource type="BoxMesh" id="BoxMesh_qta6b"]
+size = Vector3(0.5, 0.5, 0.5)
 
 [sub_resource type="Resource" id="Resource_x3rx7"]
 script = ExtResource("5_jw32o")
@@ -350,6 +375,7 @@ _data = {
 point_count = 2
 
 [sub_resource type="BoxMesh" id="BoxMesh_vvnwx"]
+size = Vector3(0.5, 0.5, 0.5)
 
 [sub_resource type="Resource" id="Resource_btbly"]
 script = ExtResource("5_jw32o")
@@ -365,6 +391,7 @@ _data = {
 point_count = 2
 
 [sub_resource type="BoxMesh" id="BoxMesh_6ehlx"]
+size = Vector3(0.5, 0.5, 0.5)
 
 [sub_resource type="Resource" id="Resource_utia5"]
 script = ExtResource("5_jw32o")
@@ -380,6 +407,7 @@ _data = {
 point_count = 2
 
 [sub_resource type="BoxMesh" id="BoxMesh_clvyn"]
+size = Vector3(0.5, 0.5, 0.5)
 
 [sub_resource type="Resource" id="Resource_d8m2u"]
 script = ExtResource("5_jw32o")
@@ -395,14 +423,13 @@ _data = {
 point_count = 2
 
 [sub_resource type="BoxMesh" id="BoxMesh_m4llh"]
+size = Vector3(0.5, 0.5, 0.5)
 
 [sub_resource type="Resource" id="Resource_lac6x"]
 script = ExtResource("5_jw32o")
 node = NodePath("../Isoliertes Kabel")
 curve = SubResource("Curve3D_5psol")
 model = SubResource("BoxMesh_m4llh")
-
-[sub_resource type="TorusMesh" id="TorusMesh_d8m2u"]
 
 [sub_resource type="Curve3D" id="Curve3D_c4ay3"]
 _data = {
@@ -412,6 +439,7 @@ _data = {
 point_count = 2
 
 [sub_resource type="BoxMesh" id="BoxMesh_aht7i"]
+size = Vector3(0.5, 0.5, 0.5)
 
 [sub_resource type="Resource" id="Resource_5jffn"]
 script = ExtResource("5_jw32o")
@@ -427,6 +455,7 @@ _data = {
 point_count = 2
 
 [sub_resource type="BoxMesh" id="BoxMesh_4n42c"]
+size = Vector3(0.5, 0.5, 0.5)
 
 [sub_resource type="Resource" id="Resource_c5snn"]
 script = ExtResource("5_jw32o")
@@ -436,12 +465,13 @@ model = SubResource("BoxMesh_4n42c")
 
 [sub_resource type="Curve3D" id="Curve3D_xvtyr"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -49.72, 0, -1.34546, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -49.7207, 0.014812, -1.35397, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
 [sub_resource type="BoxMesh" id="BoxMesh_u7mjy"]
+size = Vector3(0.5, 0.5, 0.5)
 
 [sub_resource type="Resource" id="Resource_4yxf6"]
 script = ExtResource("5_jw32o")
@@ -450,6 +480,7 @@ curve = SubResource("Curve3D_xvtyr")
 model = SubResource("BoxMesh_u7mjy")
 
 [sub_resource type="TorusMesh" id="TorusMesh_5psol"]
+material = ExtResource("15_5jffn")
 
 [sub_resource type="Curve3D" id="Curve3D_qta6b"]
 _data = {
@@ -459,6 +490,7 @@ _data = {
 point_count = 2
 
 [sub_resource type="BoxMesh" id="BoxMesh_x3rx7"]
+size = Vector3(0.5, 0.5, 0.5)
 
 [sub_resource type="Resource" id="Resource_6heos"]
 script = ExtResource("5_jw32o")
@@ -474,6 +506,7 @@ _data = {
 point_count = 2
 
 [sub_resource type="BoxMesh" id="BoxMesh_btbly"]
+size = Vector3(0.5, 0.5, 0.5)
 
 [sub_resource type="Resource" id="Resource_vs04g"]
 script = ExtResource("5_jw32o")
@@ -489,6 +522,7 @@ _data = {
 point_count = 2
 
 [sub_resource type="BoxMesh" id="BoxMesh_utia5"]
+size = Vector3(0.5, 0.5, 0.5)
 
 [sub_resource type="Resource" id="Resource_f7hdo"]
 script = ExtResource("5_jw32o")
@@ -498,12 +532,13 @@ model = SubResource("BoxMesh_utia5")
 
 [sub_resource type="Curve3D" id="Curve3D_aht7i"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -15.9304, 0, -2.63471, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -10.5843, 0, -2.63471, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
 [sub_resource type="BoxMesh" id="BoxMesh_5jffn"]
+size = Vector3(0.5, 0.5, 0.5)
 
 [sub_resource type="Resource" id="Resource_kpo4j"]
 script = ExtResource("5_jw32o")
@@ -513,12 +548,13 @@ model = SubResource("BoxMesh_5jffn")
 
 [sub_resource type="Curve3D" id="Curve3D_4n42c"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -34.6698, 0, 0.31903, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -29.3237, 0, 0.31903, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
 [sub_resource type="BoxMesh" id="BoxMesh_c5snn"]
+size = Vector3(0.5, 0.5, 0.5)
 
 [sub_resource type="Resource" id="Resource_xvtyr"]
 script = ExtResource("5_jw32o")
@@ -528,12 +564,13 @@ model = SubResource("BoxMesh_c5snn")
 
 [sub_resource type="Curve3D" id="Curve3D_u7mjy"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -64.2737, 0, 2.57753, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -64.2744, 0.014812, 2.56902, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
 [sub_resource type="BoxMesh" id="BoxMesh_4yxf6"]
+size = Vector3(0.5, 0.5, 0.5)
 
 [sub_resource type="Resource" id="Resource_qta6b"]
 script = ExtResource("5_jw32o")
@@ -549,6 +586,7 @@ _data = {
 point_count = 2
 
 [sub_resource type="BoxMesh" id="BoxMesh_6heos"]
+size = Vector3(0.5, 0.5, 0.5)
 
 [sub_resource type="Resource" id="Resource_vvnwx"]
 script = ExtResource("5_jw32o")
@@ -558,12 +596,13 @@ model = SubResource("BoxMesh_6heos")
 
 [sub_resource type="Curve3D" id="Curve3D_btbly"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -15.2925, 0, -1.0394, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -9.9548, 0, -1.0394, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
 [sub_resource type="BoxMesh" id="BoxMesh_vs04g"]
+size = Vector3(0.5, 0.5, 0.5)
 
 [sub_resource type="Resource" id="Resource_6ehlx"]
 script = ExtResource("5_jw32o")
@@ -573,12 +612,13 @@ model = SubResource("BoxMesh_vs04g")
 
 [sub_resource type="Curve3D" id="Curve3D_utia5"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -8.283, 0, 0.45948, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -7.316, 0, 0.45948, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
 [sub_resource type="BoxMesh" id="BoxMesh_f7hdo"]
+size = Vector3(0.5, 0.5, 0.5)
 
 [sub_resource type="Resource" id="Resource_clvyn"]
 script = ExtResource("5_jw32o")
@@ -588,12 +628,13 @@ model = SubResource("BoxMesh_f7hdo")
 
 [sub_resource type="Curve3D" id="Curve3D_clvyn"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -31.273, 0, 2.23493, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -13.0417, 0, 2.23493, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
 [sub_resource type="BoxMesh" id="BoxMesh_d8m2u"]
+size = Vector3(0.5, 0.5, 0.5)
 
 [sub_resource type="Resource" id="Resource_5psol"]
 script = ExtResource("5_jw32o")
@@ -602,15 +643,17 @@ curve = SubResource("Curve3D_clvyn")
 model = SubResource("BoxMesh_d8m2u")
 
 [sub_resource type="TorusMesh" id="TorusMesh_kpo4j"]
+material = ExtResource("15_5jffn")
 
 [sub_resource type="Curve3D" id="Curve3D_d8m2u"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -10.636, 0, 0.43487, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -10.261, 0, 0.43487, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
 [sub_resource type="BoxMesh" id="BoxMesh_5psol"]
+size = Vector3(0.5, 0.5, 0.5)
 
 [sub_resource type="Resource" id="Resource_m4llh"]
 script = ExtResource("5_jw32o")
@@ -620,12 +663,13 @@ model = SubResource("BoxMesh_5psol")
 
 [sub_resource type="Curve3D" id="Curve3D_lac6x"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -0.547012, 0, -7.13626, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -2.713, 0, -7.13626, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
 [sub_resource type="BoxMesh" id="BoxMesh_hpjjw"]
+size = Vector3(0.5, 0.5, 0.5)
 
 [sub_resource type="Resource" id="Resource_off7b"]
 script = ExtResource("5_jw32o")
@@ -635,12 +679,13 @@ model = SubResource("BoxMesh_hpjjw")
 
 [sub_resource type="Curve3D" id="Curve3D_lfh1j"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -23.537, 0, -5.36081, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -8.4387, 0, -5.36081, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
 [sub_resource type="BoxMesh" id="BoxMesh_7sj7i"]
+size = Vector3(0.5, 0.5, 0.5)
 
 [sub_resource type="Resource" id="Resource_semxg"]
 script = ExtResource("5_jw32o")
@@ -649,15 +694,17 @@ curve = SubResource("Curve3D_lfh1j")
 model = SubResource("BoxMesh_7sj7i")
 
 [sub_resource type="TorusMesh" id="TorusMesh_ep8v8"]
+material = ExtResource("15_5jffn")
 
 [sub_resource type="Curve3D" id="Curve3D_3133c"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -9.556, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -7.071, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
 [sub_resource type="BoxMesh" id="BoxMesh_js5gh"]
+size = Vector3(0.5, 0.5, 0.5)
 
 [sub_resource type="Resource" id="Resource_vvjo1"]
 script = ExtResource("5_jw32o")
@@ -667,12 +714,13 @@ model = SubResource("BoxMesh_js5gh")
 
 [sub_resource type="Curve3D" id="Curve3D_yisvs"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -67.8022, 0, -7.78249, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -43.9142, 0, -7.78249, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
 [sub_resource type="BoxMesh" id="BoxMesh_rgw24"]
+size = Vector3(0.5, 0.5, 0.5)
 
 [sub_resource type="Resource" id="Resource_5gwyn"]
 script = ExtResource("5_jw32o")
@@ -692,7 +740,6 @@ shadow_enabled = true
 environment = SubResource("Environment_kln2b")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
-visible = false
 use_collision = true
 size = Vector3(1000, 0.001, 1000)
 material = SubResource("StandardMaterial3D_r150o")
@@ -744,30 +791,40 @@ offset_bottom = 44.0
 
 [node name="Nodes" type="Node3D" parent="."]
 script = ExtResource("1_rgh2o")
-active = null
 
 [node name="Dampfmaschine" parent="Nodes" instance=ExtResource("2_jw32o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5.09069)
 model = ExtResource("7_hwpts")
+unlockText = "Im Jahr 1712, entwickelte Thomas Newcomen die Kolbendampfmaschine. Diese nutzt thermodynamische Energie (Dampfdruck) aus Dampferzeugern zur Umwandlung in mechanische Rotationsenergie. Diese Entdeckung erlaubte die effektive Entwicklung von fortschrittlichen Industriemaschinen."
 active = true
 
 [node name="Glass" parent="Nodes" instance=ExtResource("2_jw32o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.00209)
 model = ExtResource("8_jyqft")
+unlockText = "Ägypter erschufen ungefähr 5. Tausend v. Christus, das Glas. Dies wurde erstmals etwa als Nebenprodukt der Glasur hergestellt. Diese Erfindung erlaube es, den Ägyptern Flüssigkeiten so wie Lebensmittel oder andere Gegenstände sicher zu lagern. Seit der Antike wurde neben Hohlglas auch Flachglas und Fensterglas hergestellt. Ohne Glas wäre die aktuelle Welt nie zudem geworden, wie wir sie heute kennen."
 active = true
 
 [node name="Öl" parent="Nodes" instance=ExtResource("2_jw32o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000558853, 0.0113837, -0.00653648)
 model = ExtResource("9_3tgeq")
+unlockText = "Ist halt Öl"
 active = true
 
 [node name="Voltasche Säule" parent="Nodes" instance=ExtResource("2_jw32o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.55902, 0, -4.0552)
 model = ExtResource("10_c4ay3")
+unlockText = "Im Jahr 1800 konzipierte Alessandro Volta die Voltasche Säule. Mit dieser Erfindung wurde die Elektrizität brauchbar gemacht, da man nun eine Möglichkeit hatte, die gewonnene Elektrizität zu speichern und zu nutzen. Sie war der erste Schritt zu der uns bekannten Batterie."
 active = true
 
+[node name="Voltasche Säule2" parent="Nodes" instance=ExtResource("2_jw32o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.55902, 0, -4.0552)
+model = ExtResource("10_c4ay3")
+unlockText = "Im Jahr 1800 konzipierte Alessandro Volta die Voltasche Säule. Mit dieser Erfindung wurde die Elektrizität brauchbar gemacht, da man nun eine Möglichkeit hatte, die gewonnene Elektrizität zu speichern und zu nutzen. Sie war der erste Schritt zu der uns bekannten Batterie."
+
 [node name="Elektromagnet" parent="Nodes" instance=ExtResource("2_jw32o")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.1708, 0, -3.3632)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.1701, 0.014812, -3.37171)
 model = ExtResource("11_aht7i")
+unlockText = "William Sturgeon erfschuf im jahre 1825 den Elektromagnet. Dieser besteht aus einer Spule, in der sich infolge eines elektrischen Stromes ein magnetisches Feld bildet.In der Spule befindet sich ein offener Eisenkern, der das Magnetfeld führt und verstärkt. Magneten habe es unsermöglicht, komplexe Mechanismen zu steuern. Ohne sie wäre unsere aktuelle Kommunikationsinfrastruktur, so wie Technik nie entstanden."
 dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_grg3l"), SubResource("Resource_h1m7h")])
 
 [node name="Voltasche Säule_Path" parent="Nodes/Elektromagnet" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
@@ -785,6 +842,7 @@ model = SubResource("BoxMesh_1p5hy")
 [node name="Telegraph" parent="Nodes" instance=ExtResource("2_jw32o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.5451, 0, 0)
 model = ExtResource("14_5jffn")
+unlockText = "Im Jahr 1833 führte die Entdeckung des Telegrafen dazu, dass die Menschheit sich über Kilometer weit hinweg miteinander kommunizieren konnten, ohne dass man wie zuvor auf einen Brief warten musste. Carl Friedrich Gauß und Wilhelm Eduard Weber machten die Erfindung möglich. "
 dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_4kpch"), SubResource("Resource_1p5hy")])
 
 [node name="Elektromagnet_Path" parent="Nodes/Telegraph" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
@@ -802,6 +860,7 @@ model = SubResource("BoxMesh_frkhe")
 [node name="Glühlampe" parent="Nodes" instance=ExtResource("2_jw32o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.7303, 0, 2.97657)
 model = SubResource("TorusMesh_6heos")
+unlockText = "Mit der Glühlampe 1801 hat Louis Jacques Thénard eine wichtige Errungenschaft gemacht mit ihr war es endlich möglich, Licht auch auf anderen Wegen innerhalb von Gebäuden zu nutzen, ohne die Gefahr zu laufen, das Gebäude in Brand zu stecken. Durch sie konnte man Ort beleuchten, wo es zuvor durch die Flamme nicht möglich wäre, da es zu gefährlich ist. Sie wird auch heute noch in abgewandelter Form genutzt und ist ein wichtiger Bestandteil der heutigen Zivilisation."
 dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_frkhe"), SubResource("Resource_erwvk")])
 
 [node name="Voltasche Säule_Path" parent="Nodes/Glühlampe" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
@@ -819,6 +878,7 @@ model = SubResource("BoxMesh_h1m7h")
 [node name="Brenstoffzelle" parent="Nodes" instance=ExtResource("2_jw32o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.2637, 0, -6.99763)
 model = SubResource("TorusMesh_vvnwx")
+unlockText = "William Grove erschuf im Jahre 1838 die Brennstoffzelle. Diese ist die verbesserte Batterie, die bis heute noch in abgewandelter Form noch in vielen Bereichen Verwendung findet. Die Brennstoffzelle wandelt chemische Reaktionsenergie eines kontinuierlich zugeführten Brennstoffes und eines Oxidationsmittels in elektrische Energie um, die von vielen Geräten genutzt wird."
 dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_2w5on")])
 
 [node name="Voltasche Säule_Path" parent="Nodes/Brenstoffzelle" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
@@ -830,6 +890,7 @@ model = SubResource("BoxMesh_erwvk")
 [node name="Bleiakkumulator" parent="Nodes" instance=ExtResource("2_jw32o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.4377, 0, -6.88487)
 model = ExtResource("15_kpo4j")
+unlockText = "Im Jahr 1854 erschuf Wilhelm Josef Sinsteden den Bleiakkumulator (kurz Bleiakku). Dieser ist ein Akkumulator, bei dem die Elektroden aus Blei bzw. Bleidioxid und der Elektrolyt aus verdünnter Schwefelsäure bestehen. Bleiakkumulatoren gelten für eine Lebensdauer von einigen Jahren als zuverlässig und preisgünstiger als damalige Alternativen. Sie finden immer noch heute in vielen unterschiedlichen Bereichen Gebrauch."
 dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_346fj")])
 
 [node name="Brenstoffzelle_Path" parent="Nodes/Bleiakkumulator" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
@@ -841,6 +902,7 @@ model = SubResource("BoxMesh_2w5on")
 [node name="Telefon" parent="Nodes" instance=ExtResource("2_jw32o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.056, 0, 0)
 model = ExtResource("16_4n42c")
+unlockText = "Als Nachfolger des Telegrafen erschuf Antonio Meucci das Telefon im Jahre 1860. Dies war eine Möglichkeit seine eigene Stimme über Funk zu übertragen und Gespräche über viele Kilometer hinweg führen, was der Welt eine neue effizientere Methode der Kommunikation ermöglicht hat."
 dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_0sclb"), SubResource("Resource_hwpts")])
 
 [node name="Telegraph_Path" parent="Nodes/Telefon" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
@@ -858,6 +920,7 @@ model = SubResource("BoxMesh_fq0cl")
 [node name="Lautsprecher" parent="Nodes" instance=ExtResource("2_jw32o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.8396, 0, -4.12964)
 model = ExtResource("17_c5snn")
+unlockText = "Werner von Siemens erschuf dann im Anklang 1860 den Lautsprecher. Dieser erlaubte nun klare Wiedergabe von Geräuschen und Stimmen, was ein großer Fortschritt im Bereich der digitalen Kommunikation war und auch unsere heutigen Lautsprecher noch darauf basieren."
 dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_c4ay3")])
 
 [node name="Elektromagnet_Path" parent="Nodes/Lautsprecher" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
@@ -868,14 +931,14 @@ model = SubResource("BoxMesh_3tgeq")
 
 [node name="Gasmotor" parent="Nodes" instance=ExtResource("2_jw32o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.68501, 0, 0)
-model = SubResource("TorusMesh_btbly")
+model = ExtResource("19_kpo4j")
 dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_sxkr1"), SubResource("Resource_jyqft")])
 
 [node name="Voltasche Säule_Path" parent="Nodes/Gasmotor" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
 curve = SubResource("Curve3D_346fj")
 start = NodePath("../../Voltasche Säule")
 end = NodePath("..")
-model = SubResource("BoxMesh_0sclb")
+model = SubResource("BoxMesh_lac6x")
 
 [node name="Dampfmaschine_Path" parent="Nodes/Gasmotor" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
 curve = SubResource("Curve3D_fq0cl")
@@ -886,6 +949,7 @@ model = SubResource("BoxMesh_hwpts")
 [node name="Generator" parent="Nodes" instance=ExtResource("2_jw32o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.5771, 0, -7.2511)
 model = ExtResource("18_xvtyr")
+unlockText = "Im Jahre 1831 konzipierte Werner von Siemens den Generator. Dieser erlaubte der Menschheit durch physische Energie (Wind, Wasser, usw.) in größerem Maße als zuvor Elektrizität zu erschaffen. Ohne Generatoren würde die heutige Welt nicht so existieren, wie wir sie kennen, da Generatoren in vielen Bereichen ein unentbehrlicher Bestandteil sind."
 dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_fq0cl"), SubResource("Resource_3tgeq")])
 
 [node name="Gasmotor_Path" parent="Nodes/Generator" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
@@ -903,6 +967,7 @@ model = SubResource("BoxMesh_jyqft")
 [node name="Gummi" parent="Nodes" instance=ExtResource("2_jw32o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.1705, 0, 5.39046)
 model = SubResource("TorusMesh_vs04g")
+unlockText = "Durch die Gummiherstellung durch Vulkanisation von Charles Nelson Goodyear im Jahre 1838, wurde der Menschheit ein neues Material zur Verfügung gestellt, welches eine neuartige Fähigkeit hat, es ist elastisch. Diese Eigenschaft war ein wichtiger Punkt in der Entdeckung neuer Erfindungen wie Räder oder Kabel."
 dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_aht7i")])
 
 [node name="Öl_Path" parent="Nodes/Gummi" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
@@ -914,6 +979,7 @@ model = SubResource("BoxMesh_c4ay3")
 [node name="Isoliertes Kabel" parent="Nodes" instance=ExtResource("2_jw32o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.9677, 0, 3.70693)
 model = SubResource("TorusMesh_6ehlx")
+unlockText = "Mit der entwicklung der Gummiherstellung hat Werner von Siemens im Jahre 1838 das isolierte Kabel erfunden, was der Menschheit erlaubte die Nutzung von Elektrizität nun auch an Orten, wo es vorher zu gefährlich war. Mit dieser Entdeckung hat die Elektrizität jetzt auch den Weg zur normalen Bevölkerung gefunden."
 dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_4n42c")])
 
 [node name="Gummi_Path" parent="Nodes/Isoliertes Kabel" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
@@ -925,6 +991,7 @@ model = SubResource("BoxMesh_kpo4j")
 [node name="Luftreifen" parent="Nodes" instance=ExtResource("2_jw32o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.133, 0, 6.18864)
 model = SubResource("TorusMesh_utia5")
+unlockText = "Mit der Weiterentwickelung der Gummiherstellung konzipierte 1845 Robert William Thomson Luftreifen. Diese ermöglichten uns denn Weg, empfindliche Güter nun effektiver und schneller von A nach B am Land zu bringen, da man nicht mehr aufpassen muss, welchen Weg man nimmt, damit man möglichst wenig Unebenheiten befährt, da der Luftreifen diese größtenteils einfach absorbiert. "
 dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_u7mjy")])
 
 [node name="Gummi_Path" parent="Nodes/Luftreifen" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
@@ -936,6 +1003,7 @@ model = SubResource("BoxMesh_xvtyr")
 [node name="Halbleiterdiode" parent="Nodes" instance=ExtResource("2_jw32o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50.7286, 0, -7.05182)
 model = SubResource("TorusMesh_f7hdo")
+unlockText = "Ferdinand Braun schuf im Jahre 1874, die Diode. Diese ist ein elektronisches Bauelement auf Halbleiterbasis, das elektrischen Strom in einer Richtung passieren lässt und in der anderen Richtung sperrt. Sie hat eine Durchlassrichtung und eine Sperrrichtung. Sie ist heute immer noch ein wichtiger Teil von elektrischen Geräten."
 dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_x3rx7"), SubResource("Resource_btbly")])
 
 [node name="Isoliertes Kabel_Path" parent="Nodes/Halbleiterdiode" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
@@ -953,6 +1021,7 @@ model = SubResource("BoxMesh_vvnwx")
 [node name="Vebessertes Telefon" parent="Nodes" instance=ExtResource("2_jw32o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52.1032, 0, 0)
 model = ExtResource("7_jw32o")
+unlockText = "Das verbesserte Telefon aus 1876 ist der Nachfolger des Telefons von Martin Cooper und hatte dieses in vielen Bereichen verbessert. Mithilfe vieler weiterer neuen Technologien ist aus diesem das uns bekannte Smartphone entstanden."
 dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_utia5"), SubResource("Resource_d8m2u"), SubResource("Resource_lac6x")])
 
 [node name="Telefon_Path" parent="Nodes/Vebessertes Telefon" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
@@ -975,7 +1044,8 @@ model = SubResource("BoxMesh_m4llh")
 
 [node name="Ottomotor" parent="Nodes" instance=ExtResource("2_jw32o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.8724, 0, 3.2349)
-model = SubResource("TorusMesh_d8m2u")
+model = ExtResource("19_kpo4j")
+unlockText = "Der Ottomotor ist der Motor entstand im Jahre 1876 durch Nicolaus August Otto, der auch heute noch in den meisten Autos steckt und war zu seiner Zeit ein riesiger Fortschritt im Bereich der Drehmoment-Erzeugung."
 dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_5jffn")])
 
 [node name="Gasmotor_Path" parent="Nodes/Ottomotor" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
@@ -987,6 +1057,7 @@ model = SubResource("BoxMesh_aht7i")
 [node name="Transformator" parent="Nodes" instance=ExtResource("2_jw32o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66.8908, 0, -2.01774)
 model = ExtResource("19_u7mjy")
+unlockText = "Im Jahre 1881 entwickelten die Erfinder Zipernowsky, Déri und Bláthy den Transformator. Ein Transformator ist ein Bauelement der Elektrotechnik, der eine Eingangswechselspannung wandelt, die an einer der Spulen angelegt ist und die in eine Ausgangswechselspannung zurückwandelt. Die an der anderen Spule abgegriffen werden kann. Diese Technologie ist heute immer noch unabdingbar, da unser gesamtes Stromnetz davon abhängt."
 dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_c5snn"), SubResource("Resource_4yxf6")])
 
 [node name="Isoliertes Kabel_Path" parent="Nodes/Transformator" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
@@ -1004,6 +1075,7 @@ model = SubResource("BoxMesh_u7mjy")
 [node name="Strom-Kraftwerk" parent="Nodes" instance=ExtResource("2_jw32o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 70.3108, 0, -7.78249)
 model = SubResource("TorusMesh_5psol")
+unlockText = "Mit dem Erbau des ersten Wasserstromkraftwerks hat man begonnen, nun Strom in großen Maßstab zu produzieren und auch an Orte zu legen, wo er durch Faktoren nicht generierbar ist, was ein großer Fortschritt in der Geschichte der Menschheit war."
 dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_6heos"), SubResource("Resource_vs04g"), SubResource("Resource_f7hdo")])
 
 [node name="Transformator_Path" parent="Nodes/Strom-Kraftwerk" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
@@ -1025,8 +1097,9 @@ end = NodePath("..")
 model = SubResource("BoxMesh_utia5")
 
 [node name="Automobiel" parent="Nodes" instance=ExtResource("2_jw32o")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 74.8028, 0, 5.86961)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 69.4567, 0, 5.86961)
 model = ExtResource("20_4yxf6")
+unlockText = "Mit dem Automobil von Carl Benz im Jahre 1881, hat sich die Tür geöffnet Waren und Güter ohne Pferde zu transportieren und vor allem war man unabhängig von vielen zuvor relevanten Aspekten. "
 dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_kpo4j"), SubResource("Resource_xvtyr")])
 
 [node name="Ottomotor_Path" parent="Nodes/Automobiel" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
@@ -1044,6 +1117,7 @@ model = SubResource("BoxMesh_c5snn")
 [node name="Kathodenstrahlröhre" parent="Nodes" instance=ExtResource("2_jw32o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 81.4445, 0, -5.94073)
 model = ExtResource("21_qta6b")
+unlockText = "Die Kathodenstrahlröhre von Karl Ferdinand Braun ist eine Elektronenröhre, die einen gebündelten Elektronenstrahl erzeugt. Dieser kann mittels magnetischer oder elektrischer Felder abgelenkt bzw. moduliert werden, so dass ein sichtbares Bild erzeugt wird, wenn der Elektronenstrahl beim Auftreffen auf eine an der Innenseite der Röhre angebrachte Leuchtstoff-Schicht trifft. Sie ist der Vorgänger des modernen Displays aus dem Jahre 1897."
 dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_qta6b"), SubResource("Resource_vvnwx")])
 
 [node name="Elektromagnet_Path" parent="Nodes/Kathodenstrahlröhre" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
@@ -1059,8 +1133,9 @@ end = NodePath("..")
 model = SubResource("BoxMesh_6heos")
 
 [node name="Elektronenröhre" parent="Nodes" instance=ExtResource("2_jw32o")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 96.737, 0, -4.90133)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 91.3993, 0, -4.90133)
 model = ExtResource("23_aht7i")
+unlockText = "John Ambrose Fleming erschuf im Jahre 1904 die Elektronenröhre, diese ist ein aktives elektrisches Bauelement mit Elektroden, die sich in einem evakuierten oder gasgefüllten Kolben aus Glas, Stahl oder Keramik befinden. Die Anschlüsse der Elektroden sind aus dem Röhrenkolben nach außen geführt. In ihrer einfachsten Form als Diode enthält eine Elektronenröhre eine beheizte Kathode und eine Anode. Elektronenröhren dienen zur Erzeugung, Gleichrichtung, Verstärkung oder Modulation elektrischer Signale und werden heute immer noch verwendet."
 dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_6ehlx")])
 
 [node name="Kathodenstrahlröhre_Path" parent="Nodes/Elektronenröhre" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
@@ -1070,8 +1145,9 @@ end = NodePath("..")
 model = SubResource("BoxMesh_vs04g")
 
 [node name="Magnetron" parent="Nodes" instance=ExtResource("2_jw32o")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 105.02, 0, -5.36081)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 98.7153, 0, -5.36081)
 model = ExtResource("22_x3rx7")
+unlockText = "Im jahre 1904 konzipierte Albert Wallace Hull das Magnetron. Das Magnetron ist eine Vakuum-Laufzeitröhre zur Erzeugung elektromagnetischer Wellen im Mikrowellenbereich mit einem Wirkungsgrad von bis zu 80 %.Magnetrone sind sehr effiziente, preiswerte Generatoren für Hochfrequenz. Leistung und Frequenz werden maßgeblich durch den mechanischen Aufbau bestimmt und sind meist nicht änderbar. Ohne den Magnetron würde ein Großteil der Menschheit verhungern."
 dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_clvyn")])
 
 [node name="Elektronenröhre_Path" parent="Nodes/Magnetron" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
@@ -1081,8 +1157,9 @@ end = NodePath("..")
 model = SubResource("BoxMesh_f7hdo")
 
 [node name="Computer" parent="Nodes" instance=ExtResource("2_jw32o")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 128.01, 0, -7.13626)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 104.441, 0, -7.13626)
 model = ExtResource("26_kpo4j")
+unlockText = "Charles Babbage und Ada Lovelace konzipierten den Computer. Ein Computer oder Rechner ist ein Gerät, das mittels programmierbarer Rechenvorschriften Daten verarbeitet. Dementsprechend werden vereinzelt auch die abstrahierenden beziehungsweise veralteten, synonym gebrauchten Begriffe Rechenanlage, Datenverarbeitungsanlage oder elektronische Datenverarbeitungsanlage sowie Elektronengehirn verwendet. Mit ihm wurde die Tür zur Digitalisierung geöffnet."
 dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_5psol")])
 
 [node name="Elektronenröhre_Path" parent="Nodes/Computer" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
@@ -1092,8 +1169,9 @@ end = NodePath("..")
 model = SubResource("BoxMesh_d8m2u")
 
 [node name="Mikrochip" parent="Nodes" instance=ExtResource("2_jw32o")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 138.646, 0, -7.57113)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 114.702, 0, -7.57113)
 model = SubResource("TorusMesh_kpo4j")
+unlockText = "Der Mikrochip von Jack Kilby 1958 ist ein integrierter Schaltkreis, auch integrierte Schaltung ist eine auf einem dünnen, meist einige Millimeter großen Plättchen aus Halbleiter-Material aufgebrachte elektronische Schaltung. Sie wird manch mal auch als Festkörperschaltkreis oder monolithischer Schaltkreis bezeichnet. Ein IC enthält typischerweise eine Kombination von zahlreichen miteinander elektrisch verbundenen elektronischen Halbleiterbauelementen wie Transistoren, Dioden und/oder weiteren aktiven und passiven Bauelementen. ICs sind der Hauptbestandteil der modernen Technik und aktuell und in naher Zukunft unabdingbar."
 dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_m4llh")])
 
 [node name="Computer_Path" parent="Nodes/Mikrochip" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
@@ -1103,8 +1181,9 @@ end = NodePath("..")
 model = SubResource("BoxMesh_5psol")
 
 [node name="Kernspaltung" parent="Nodes" instance=ExtResource("2_jw32o")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 128.557, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 107.154, 0, 0)
 model = ExtResource("27_5jffn")
+unlockText = "Kernspaltung, erfunden von Otto Hahn 1938, bezeichnet Vorgänge in der Kernphysik, bei denen ein Atomkern unter Energiefreisetzung in zwei oder mehr kleinere Spaltprodukte zerlegt wird. Typisch ist, dass bei der Spaltung Neutronen emittiert werden. Die Anwendung der Kernspaltung hat seit ihrer Entdeckung 1938 durch die zivile Nutzung (Kernenergie) und die militärische Nutzung (Kernwaffen) große Bedeutung erlangt."
 dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_off7b"), SubResource("Resource_semxg")])
 
 [node name="Computer_Path" parent="Nodes/Kernspaltung" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
@@ -1120,8 +1199,9 @@ end = NodePath("..")
 model = SubResource("BoxMesh_7sj7i")
 
 [node name="Kernkraft" parent="Nodes" instance=ExtResource("2_jw32o")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 138.113, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 114.225, 0, 0)
 model = SubResource("TorusMesh_ep8v8")
+unlockText = "Enrico Fermi erfang 1938 das Kernkraftwerk oder Atomkraftwerk, dies ist ein Wärmekraftwerk, in dem mittels kontrollierter Kernspaltung Strom erzeugt wird. In Kernkraftwerken findet eine gesteuerte Kettenreaktion statt. Neutronen spalten einige Isotope der Elemente Uran oder Plutonium und Kernkraft ist bis heute eine der effektivsten Wege, Strom zu erzeugen."
 dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_vvjo1"), SubResource("Resource_5gwyn")])
 
 [node name="Kernspaltung_Path" parent="Nodes/Kernkraft" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]

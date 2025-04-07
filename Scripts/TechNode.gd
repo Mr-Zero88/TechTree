@@ -18,18 +18,30 @@ var isready = false;
 
 @export var distance: float = 1;
 
+var material = load("res://Textures/global.material")
+var material_inaktiv = load("res://Textures/global_inaktiv.material")
+
+#@export var initial = false:
+	#set(value):
+		#initial = value
+		#active = value
+
 @export var active = false:
 	set(value):
 		active = value
-		print(value)
 		activeChanged.emit(value)
-		var material = StandardMaterial3D.new()
+		#var material = StandardMaterial3D.new()
+		if(model == null): return
 		if(value):
-			material.albedo_color = Color(1, 0, 0, 1)
+			for i in range(model.get_surface_count()):
+				model.surface_set_material(i, material)
+			#material.albedo_color = Color(1, 0, 0, 1)
 		else:
-			material.albedo_color = Color(1, 1, 1, 1)
-		if(model != null):
-			model.surface_set_material(0, material)
+			for i in range(model.get_surface_count()):
+				model.surface_set_material(i, material_inaktiv)
+			#material.albedo_color = Color(1, 1, 1, 1)
+		#if(model != null):
+			#model.surface_set_material(0, material)
 
 @export var dependencies: Array[Dependency]:
 	set(value):
@@ -52,6 +64,7 @@ var completeCounter = 0;
 
 func _ready() -> void:
 	isready = true;
+	#active = initial
 	for i in range(dependencies.size()):
 		connect_dependency(dependencies[i])
 	completePath.connect(func():

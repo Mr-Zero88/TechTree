@@ -3,7 +3,7 @@ extends Path3D
 class_name DependencyPath
 
 const RAY_LENGTH = 100
-const SPEED = 500
+const SPEED = 50
 
 var follower: PathFollow3D;
 var body: StaticBody3D;
@@ -43,9 +43,9 @@ func _process(delta: float) -> void:
 			var target = self.curve.get_closest_offset(position)
 			var distance = target - follower.progress;
 			var direction = 1 if distance > 0 else -1;
-			if(abs(distance) < direction / length * SPEED * delta):
+			if(abs(distance) < direction * SPEED * delta):
 				return
-			follower.progress += direction / length * SPEED * delta
+			follower.progress += direction * SPEED * delta
 			if(follower.progress < start.distance): follower.progress = start.distance
 			if(follower.progress > length - end.distance): follower.progress = length - end.distance
 
@@ -74,12 +74,14 @@ func _ready() -> void:
 	end.positionChanged.connect(func (nodePosition):
 		curve.set_point_position(0, to_local(start.position))
 	)
+	if(start.active == null): start.active = false
 	$PathFollow3D/MeshInstance3D.visible = start.active
 	start.activeChanged.connect(func(activ):
-		print("Start Test")
+		# print("Start Test")
 		$PathFollow3D/MeshInstance3D.visible = start.active
 	)
 	end.activeChanged.connect(func(activ):
-		print("End Test")
-		$PathFollow3D/MeshInstance3D.visible = !start.active
+		# print("End Test")
+		if(start.active):
+			$PathFollow3D/MeshInstance3D.visible = false
 	)
