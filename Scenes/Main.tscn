@@ -4,9 +4,9 @@
 [ext_resource type="Script" uid="uid://dg0tw4c1yldw7" path="res://Scripts/Camera3d.gd" id="1_pbw6q"]
 [ext_resource type="Script" uid="uid://6l363iepftwb" path="res://Scripts/TechNode.gd" id="1_rgh2o"]
 [ext_resource type="PackedScene" uid="uid://ds1ubnrgv865p" path="res://Scenes/TechNode.tscn" id="2_jw32o"]
+[ext_resource type="Script" path="res://Scripts/InfoPanel.gd" id="3_aht7i"]
 [ext_resource type="Script" uid="uid://75thxom5gfp0" path="res://Scripts/Dependency.gd" id="5_jw32o"]
 [ext_resource type="PackedScene" uid="uid://bv557cuctre4h" path="res://Scenes/DependencyPath.tscn" id="6_50glp"]
-[ext_resource type="Script" uid="uid://dl2kb8yiw22y7" path="res://Scripts/InfoPanel.gd" id="6_jw32o"]
 [ext_resource type="Script" uid="uid://bl1nqlm3g42qa" path="res://Scenes/CloseButton.gd" id="6_v1gob"]
 [ext_resource type="ArrayMesh" uid="uid://bh8hl6ddt2oon" path="res://Meshes/steam_engine.tres" id="7_hwpts"]
 [ext_resource type="ArrayMesh" uid="uid://l36q6nfjx2d4" path="res://Meshes/better-telephone.tres" id="7_jw32o"]
@@ -717,7 +717,7 @@ grow_vertical = 2
 [node name="InfoPanel" type="Panel" parent="CenterContainer"]
 custom_minimum_size = Vector2(400, 300)
 layout_mode = 2
-script = ExtResource("6_jw32o")
+script = ExtResource("3_aht7i")
 
 [node name="Button" type="Button" parent="CenterContainer/InfoPanel"]
 layout_mode = 0
