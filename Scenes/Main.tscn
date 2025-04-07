@@ -1,4 +1,4 @@
-[gd_scene load_steps=115 format=3 uid="uid://coarme3bsgscw"]
+[gd_scene load_steps=139 format=3 uid="uid://coarme3bsgscw"]
 
 [ext_resource type="Script" uid="uid://1n7dl2jsghkc" path="res://Scripts/Main.gd" id="1_50glp"]
 [ext_resource type="Script" uid="uid://dg0tw4c1yldw7" path="res://Scripts/Camera3d.gd" id="1_pbw6q"]
@@ -8,6 +8,20 @@
 [ext_resource type="PackedScene" uid="uid://bv557cuctre4h" path="res://Scenes/DependencyPath.tscn" id="6_50glp"]
 [ext_resource type="Script" uid="uid://dl2kb8yiw22y7" path="res://Scripts/InfoPanel.gd" id="6_jw32o"]
 [ext_resource type="Script" uid="uid://bl1nqlm3g42qa" path="res://Scenes/CloseButton.gd" id="6_v1gob"]
+[ext_resource type="ArrayMesh" uid="uid://dm02m4viyhlye" path="res://Meshes/steam_engine.tres" id="7_hwpts"]
+[ext_resource type="ArrayMesh" uid="uid://mnou86os3dap" path="res://Meshes/glass.tres" id="8_jyqft"]
+[ext_resource type="ArrayMesh" uid="uid://bavmfbmh30xte" path="res://Meshes/oil.tres" id="9_3tgeq"]
+[ext_resource type="ArrayMesh" uid="uid://dqiwmxs6e8uoi" path="res://Meshes/voltaic_collumn.tres" id="10_c4ay3"]
+[ext_resource type="ArrayMesh" uid="uid://dalmvqd1j303a" path="res://Meshes/electromagnet.tres" id="11_aht7i"]
+[ext_resource type="ArrayMesh" uid="uid://dy4q6cna42buw" path="res://Meshes/telegraph.tres" id="14_5jffn"]
+[ext_resource type="ArrayMesh" uid="uid://dxrspmu464fq5" path="res://Meshes/powercell.tres" id="15_kpo4j"]
+[ext_resource type="ArrayMesh" uid="uid://dvspbjrssu32g" path="res://Meshes/telephone.tres" id="16_4n42c"]
+[ext_resource type="ArrayMesh" uid="uid://cx34ev5thp63f" path="res://Meshes/loudespeaker.tres" id="17_c5snn"]
+[ext_resource type="ArrayMesh" uid="uid://bs7446jsc1ckg" path="res://Meshes/generator.tres" id="18_xvtyr"]
+[ext_resource type="ArrayMesh" uid="uid://bpyec1ef48eqq" path="res://Meshes/transformer.tres" id="19_u7mjy"]
+[ext_resource type="ArrayMesh" uid="uid://526q4fhs8c0s" path="res://Meshes/car.tres" id="20_4yxf6"]
+[ext_resource type="ArrayMesh" uid="uid://cb3e8hngkgv72" path="res://Meshes/cathode-tube.tres" id="21_qta6b"]
+[ext_resource type="ArrayMesh" uid="uid://b0k5a5sfwmvsh" path="res://Meshes/magnetron.tres" id="22_x3rx7"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_r150o"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -85,6 +99,8 @@ node = NodePath("../Voltasche Säule")
 curve = SubResource("Curve3D_grg3l")
 model = SubResource("BoxMesh_frkhe")
 
+[sub_resource type="TorusMesh" id="TorusMesh_6heos"]
+
 [sub_resource type="Curve3D" id="Curve3D_4kpch"]
 _data = {
 "points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
@@ -114,6 +130,8 @@ script = ExtResource("5_jw32o")
 node = NodePath("../Glass")
 curve = SubResource("Curve3D_1p5hy")
 model = SubResource("BoxMesh_h1m7h")
+
+[sub_resource type="TorusMesh" id="TorusMesh_vvnwx"]
 
 [sub_resource type="Curve3D" id="Curve3D_h1m7h"]
 _data = {
@@ -190,6 +208,8 @@ node = NodePath("../Elektromagnet")
 curve = SubResource("Curve3D_jyqft")
 model = SubResource("BoxMesh_3tgeq")
 
+[sub_resource type="TorusMesh" id="TorusMesh_btbly"]
+
 [sub_resource type="Curve3D" id="Curve3D_346fj"]
 _data = {
 "points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
@@ -250,6 +270,8 @@ node = NodePath("../Elektromagnet")
 curve = SubResource("Curve3D_hwpts")
 model = SubResource("BoxMesh_jyqft")
 
+[sub_resource type="TorusMesh" id="TorusMesh_vs04g"]
+
 [sub_resource type="Curve3D" id="Curve3D_3tgeq"]
 _data = {
 "points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
@@ -264,6 +286,8 @@ script = ExtResource("5_jw32o")
 node = NodePath("../Öl")
 curve = SubResource("Curve3D_3tgeq")
 model = SubResource("BoxMesh_c4ay3")
+
+[sub_resource type="TorusMesh" id="TorusMesh_6ehlx"]
 
 [sub_resource type="Curve3D" id="Curve3D_5jffn"]
 _data = {
@@ -280,6 +304,8 @@ node = NodePath("../Gummi")
 curve = SubResource("Curve3D_5jffn")
 model = SubResource("BoxMesh_kpo4j")
 
+[sub_resource type="TorusMesh" id="TorusMesh_utia5"]
+
 [sub_resource type="Curve3D" id="Curve3D_c5snn"]
 _data = {
 "points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
@@ -294,6 +320,8 @@ script = ExtResource("5_jw32o")
 node = NodePath("../Gummi")
 curve = SubResource("Curve3D_c5snn")
 model = SubResource("BoxMesh_xvtyr")
+
+[sub_resource type="TorusMesh" id="TorusMesh_f7hdo"]
 
 [sub_resource type="Curve3D" id="Curve3D_4yxf6"]
 _data = {
@@ -324,6 +352,8 @@ script = ExtResource("5_jw32o")
 node = NodePath("../Bleiakkumulator")
 curve = SubResource("Curve3D_6heos")
 model = SubResource("BoxMesh_vvnwx")
+
+[sub_resource type="TorusMesh" id="TorusMesh_clvyn"]
 
 [sub_resource type="Curve3D" id="Curve3D_vs04g"]
 _data = {
@@ -370,6 +400,8 @@ node = NodePath("../Isoliertes Kabel")
 curve = SubResource("Curve3D_5psol")
 model = SubResource("BoxMesh_m4llh")
 
+[sub_resource type="TorusMesh" id="TorusMesh_d8m2u"]
+
 [sub_resource type="Curve3D" id="Curve3D_c4ay3"]
 _data = {
 "points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
@@ -414,6 +446,8 @@ script = ExtResource("5_jw32o")
 node = NodePath("../Elektromagnet")
 curve = SubResource("Curve3D_xvtyr")
 model = SubResource("BoxMesh_u7mjy")
+
+[sub_resource type="TorusMesh" id="TorusMesh_5psol"]
 
 [sub_resource type="Curve3D" id="Curve3D_qta6b"]
 _data = {
@@ -601,14 +635,19 @@ script = ExtResource("1_rgh2o")
 active = null
 
 [node name="Dampfmaschine" parent="Nodes" instance=ExtResource("2_jw32o")]
+model = ExtResource("7_hwpts")
 
 [node name="Glass" parent="Nodes" instance=ExtResource("2_jw32o")]
+model = ExtResource("8_jyqft")
 
 [node name="Öl" parent="Nodes" instance=ExtResource("2_jw32o")]
+model = ExtResource("9_3tgeq")
 
 [node name="Voltasche Säule" parent="Nodes" instance=ExtResource("2_jw32o")]
+model = ExtResource("10_c4ay3")
 
 [node name="Elektromagnet" parent="Nodes" instance=ExtResource("2_jw32o")]
+model = ExtResource("11_aht7i")
 dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_grg3l"), SubResource("Resource_h1m7h")])
 
 [node name="Voltasche Säule_Path" parent="Nodes/Elektromagnet" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
@@ -624,6 +663,7 @@ end = NodePath("..")
 model = SubResource("BoxMesh_1p5hy")
 
 [node name="Telegraph" parent="Nodes" instance=ExtResource("2_jw32o")]
+model = ExtResource("14_5jffn")
 dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_4kpch"), SubResource("Resource_1p5hy")])
 
 [node name="Elektromagnet_Path" parent="Nodes/Telegraph" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
@@ -639,6 +679,7 @@ end = NodePath("..")
 model = SubResource("BoxMesh_frkhe")
 
 [node name="Glühlampe" parent="Nodes" instance=ExtResource("2_jw32o")]
+model = SubResource("TorusMesh_6heos")
 dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_frkhe"), SubResource("Resource_erwvk")])
 
 [node name="Voltasche Säule_Path" parent="Nodes/Glühlampe" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
@@ -654,6 +695,7 @@ end = NodePath("..")
 model = SubResource("BoxMesh_h1m7h")
 
 [node name="Brenstoffzelle" parent="Nodes" instance=ExtResource("2_jw32o")]
+model = SubResource("TorusMesh_vvnwx")
 dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_2w5on")])
 
 [node name="Voltasche Säule_Path" parent="Nodes/Brenstoffzelle" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
@@ -663,6 +705,7 @@ end = NodePath("..")
 model = SubResource("BoxMesh_erwvk")
 
 [node name="Bleiakkumulator" parent="Nodes" instance=ExtResource("2_jw32o")]
+model = ExtResource("15_kpo4j")
 dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_346fj")])
 
 [node name="Brenstoffzelle_Path" parent="Nodes/Bleiakkumulator" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
@@ -672,6 +715,7 @@ end = NodePath("..")
 model = SubResource("BoxMesh_2w5on")
 
 [node name="Telefon" parent="Nodes" instance=ExtResource("2_jw32o")]
+model = ExtResource("16_4n42c")
 dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_0sclb"), SubResource("Resource_hwpts")])
 
 [node name="Telegraph_Path" parent="Nodes/Telefon" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
@@ -687,6 +731,7 @@ end = NodePath("..")
 model = SubResource("BoxMesh_fq0cl")
 
 [node name="Lautsprecher" parent="Nodes" instance=ExtResource("2_jw32o")]
+model = ExtResource("17_c5snn")
 dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_c4ay3")])
 
 [node name="Elektromagnet_Path" parent="Nodes/Lautsprecher" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
@@ -696,6 +741,7 @@ end = NodePath("..")
 model = SubResource("BoxMesh_3tgeq")
 
 [node name="Gasmotor" parent="Nodes" instance=ExtResource("2_jw32o")]
+model = SubResource("TorusMesh_btbly")
 dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_sxkr1"), SubResource("Resource_jyqft")])
 
 [node name="Voltasche Säule_Path" parent="Nodes/Gasmotor" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
@@ -711,6 +757,7 @@ end = NodePath("..")
 model = SubResource("BoxMesh_hwpts")
 
 [node name="Generator" parent="Nodes" instance=ExtResource("2_jw32o")]
+model = ExtResource("18_xvtyr")
 dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_fq0cl"), SubResource("Resource_3tgeq")])
 
 [node name="Gasmotor_Path" parent="Nodes/Generator" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
@@ -726,6 +773,7 @@ end = NodePath("..")
 model = SubResource("BoxMesh_jyqft")
 
 [node name="Gummi" parent="Nodes" instance=ExtResource("2_jw32o")]
+model = SubResource("TorusMesh_vs04g")
 dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_aht7i")])
 
 [node name="Öl_Path" parent="Nodes/Gummi" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
@@ -735,6 +783,7 @@ end = NodePath("..")
 model = SubResource("BoxMesh_c4ay3")
 
 [node name="Isoliertes Kabel" parent="Nodes" instance=ExtResource("2_jw32o")]
+model = SubResource("TorusMesh_6ehlx")
 dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_4n42c")])
 
 [node name="Gummi_Path" parent="Nodes/Isoliertes Kabel" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
@@ -744,6 +793,7 @@ end = NodePath("..")
 model = SubResource("BoxMesh_kpo4j")
 
 [node name="Luftreifen" parent="Nodes" instance=ExtResource("2_jw32o")]
+model = SubResource("TorusMesh_utia5")
 dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_u7mjy")])
 
 [node name="Gummi_Path" parent="Nodes/Luftreifen" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
@@ -753,6 +803,7 @@ end = NodePath("..")
 model = SubResource("BoxMesh_xvtyr")
 
 [node name="Halbleiterdiode" parent="Nodes" instance=ExtResource("2_jw32o")]
+model = SubResource("TorusMesh_f7hdo")
 dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_x3rx7"), SubResource("Resource_btbly")])
 
 [node name="Isoliertes Kabel_Path" parent="Nodes/Halbleiterdiode" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
@@ -768,6 +819,7 @@ end = NodePath("..")
 model = SubResource("BoxMesh_vvnwx")
 
 [node name="Vebessertes Telefon" parent="Nodes" instance=ExtResource("2_jw32o")]
+model = SubResource("TorusMesh_clvyn")
 dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_utia5"), SubResource("Resource_d8m2u"), SubResource("Resource_lac6x")])
 
 [node name="Telefon_Path" parent="Nodes/Vebessertes Telefon" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
@@ -789,6 +841,7 @@ end = NodePath("..")
 model = SubResource("BoxMesh_m4llh")
 
 [node name="Ottomotor" parent="Nodes" instance=ExtResource("2_jw32o")]
+model = SubResource("TorusMesh_d8m2u")
 dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_5jffn")])
 
 [node name="Gasmotor_Path" parent="Nodes/Ottomotor" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
@@ -798,6 +851,7 @@ end = NodePath("..")
 model = SubResource("BoxMesh_aht7i")
 
 [node name="Transformator" parent="Nodes" instance=ExtResource("2_jw32o")]
+model = ExtResource("19_u7mjy")
 dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_c5snn"), SubResource("Resource_4yxf6")])
 
 [node name="Isoliertes Kabel_Path" parent="Nodes/Transformator" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
@@ -813,6 +867,7 @@ end = NodePath("..")
 model = SubResource("BoxMesh_u7mjy")
 
 [node name="Strom-Kraftwerk" parent="Nodes" instance=ExtResource("2_jw32o")]
+model = SubResource("TorusMesh_5psol")
 dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_6heos"), SubResource("Resource_vs04g"), SubResource("Resource_f7hdo")])
 
 [node name="Transformator_Path" parent="Nodes/Strom-Kraftwerk" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
@@ -834,6 +889,7 @@ end = NodePath("..")
 model = SubResource("BoxMesh_utia5")
 
 [node name="Automobiel" parent="Nodes" instance=ExtResource("2_jw32o")]
+model = ExtResource("20_4yxf6")
 dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_kpo4j"), SubResource("Resource_xvtyr")])
 
 [node name="Ottomotor_Path" parent="Nodes/Automobiel" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
@@ -849,6 +905,7 @@ end = NodePath("..")
 model = SubResource("BoxMesh_c5snn")
 
 [node name="Kathodenstrahlröhre" parent="Nodes" instance=ExtResource("2_jw32o")]
+model = ExtResource("21_qta6b")
 dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_qta6b"), SubResource("Resource_vvnwx")])
 
 [node name="Elektromagnet_Path" parent="Nodes/Kathodenstrahlröhre" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
@@ -864,6 +921,7 @@ end = NodePath("..")
 model = SubResource("BoxMesh_6heos")
 
 [node name="Elektronenröhre" parent="Nodes" instance=ExtResource("2_jw32o")]
+model = ExtResource("22_x3rx7")
 dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_6ehlx")])
 
 [node name="Kathodenstrahlröhre_Path" parent="Nodes/Elektronenröhre" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
