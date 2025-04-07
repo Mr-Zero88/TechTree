@@ -9,9 +9,10 @@ var follower: PathFollow3D;
 var body: StaticBody3D;
 var length: float;
 var selected = false;
+var done = false;
 
-@export var startDistance: float = 1;
-@export var endDistance: float = 1;
+@export var start: TechNode;
+@export var end: TechNode;
 
 @export var model: Mesh:
 	set(value):
@@ -23,12 +24,15 @@ var selected = false;
 
 func _process(delta: float) -> void:
 	if(Engine.is_editor_hint()): return
-	if(Input.is_action_just_pressed('slider_move')):
+	if(Input.is_action_just_pressed('slider_move')) && !selected && !done && start.active:
 		var cast = mouseCast()
 		if(cast != null):
 			selected = cast.collider == body
-	elif(Input.is_action_just_released('slider_move')):
+	elif(Input.is_action_just_released('slider_move')) && selected:
 		selected = false
+		if(follower.progress == length - end.distance):
+			done = true
+			end.completePath.emit();
 	if Input.is_action_pressed('slider_move') && selected:
 		var cast = mouseCast()
 		if(cast != null):
@@ -39,8 +43,8 @@ func _process(delta: float) -> void:
 			if(abs(distance) < direction / length * SPEED):
 				return
 			follower.progress += direction / length * SPEED
-			if(follower.progress < startDistance): follower.progress = startDistance
-			if(follower.progress > length - endDistance): follower.progress = length - endDistance
+			if(follower.progress < start.distance): follower.progress = start.distance
+			if(follower.progress > length - end.distance): follower.progress = length - end.distance
 
 func mouseCast():
 	var mousePos = get_viewport().get_mouse_position()
@@ -59,5 +63,11 @@ func mouseCast():
 func _ready() -> void:
 	follower = self.find_child("PathFollow3D")
 	body = follower.find_child("StaticBody3D")
-	follower.progress = startDistance
+	follower.progress = start.distance
 	length = self.curve.get_baked_length()
+	start.positionChanged.connect(func (nodePosition):
+		curve.set_point_position(0, to_local(nodePosition))
+	)
+	end.positionChanged.connect(func (nodePosition):
+		curve.set_point_position(0, to_local(nodePosition))
+	)

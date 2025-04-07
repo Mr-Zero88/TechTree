@@ -3,6 +3,9 @@ extends Node3D
 class_name TechNode
 
 signal positionChanged(position: Vector3)
+signal activeChanged(active: bool)
+
+signal completePath()
 
 var isready = false;
 
@@ -10,6 +13,22 @@ var isready = false;
 	set(value):
 		model = value
 		$MeshInstance3D.mesh = value
+
+@export var unlockText: String = "";
+
+@export var distance: float = 1;
+
+@export var active = false:
+	set(value):
+		active = value
+		activeChanged.emit(value)
+		var material = StandardMaterial3D.new()
+		if(value):
+			material.albedo_color = Color(1, 0, 0, 1)
+		else:
+			material.albedo_color = Color(1, 1, 1, 1)
+		if(model != null):
+			model.surface_set_material(0, material)
 
 @export var dependencies: Array[Dependency]:
 	set(value):
@@ -28,24 +47,17 @@ var isready = false;
 				connect_dependency(value[i])
 		dependencies = value
 
+var completeCounter = 0;
+
 func _ready() -> void:
 	isready = true;
 	for i in range(dependencies.size()):
 		connect_dependency(dependencies[i])
-
-#
-#@export_tool_button("Test") var tsest = test
-#func test():
-	##print(Dependency.new().nameChanged)
-	#print(load("res://Deps/technode.tres").nameChanged)
-	##for i in range(dependencies.size()):
-		###connect_dependency(dependencies[i])
-		###dependencies[i].path = find_child(dependencies[i].name)
-		###dependencies[i].
-		##var dependency = dependencies[i]
-		##print(dependency)
-		##print(dependency.nameChanged)
-		##print(dependency.name)
+	completePath.connect(func():
+		completeCounter += 1;
+		if(completeCounter == dependencies.size()):
+			active = true
+	)
 
 func _init() -> void:
 	set_notify_transform(true)
@@ -74,12 +86,6 @@ func connect_dependency(dependency: Dependency):
 				dependency.curve = Curve3D.new()
 				dependency.curve.add_point(to_local(nodeObject.position))
 				dependency.curve.add_point(Vector3(0, 0, 0))
-				#print(to_local(nodeObject.position), to_local(position))
-				nodeObject.positionChanged.connect(func (nodePosition):
-					if(dependency.curve == null):
-						return
-					dependency.curve.set_point_position(0, to_local(nodePosition))
-				)
 		if(dependency.path == null): return
 		dependency.path.curve = curve
 	
@@ -87,12 +93,14 @@ func connect_dependency(dependency: Dependency):
 		if(name == ""):
 			dependency.path = null
 		else:
-			var path = find_child(name + "_Path")
+			var path: DependencyPath = find_child(name + "_Path")
 			if(path == null):
 				path = preload("res://Scenes/DependencyPath.tscn").instantiate()
 			path.name = name + "_Path"
 			path.model = dependency.model
 			path.curve = dependency.curve
+			path.end = self;
+			path.start = get_node(dependency.node);
 			dependency.path = path
 	
 	var pathChanged = func(dependency: Dependency, oldPath: Path3D, path: Path3D):
@@ -108,13 +116,6 @@ func connect_dependency(dependency: Dependency):
 	var modelChanged = func(dependency: Dependency, model: Mesh):
 		dependency.path.model = model
 	
-	var positionChanged = func(position: Vector3):
-		if(dependency.curve == null):
-			return
-		var nodeObject: TechNode = get_node(dependency.node)
-		dependency.curve.set_point_position(0, to_local(nodeObject.position))
-	
-	self.positionChanged.connect(positionChanged)
 	dependency.nameChanged.connect(nameChanged)
 	dependency.nodeChanged.connect(nodeChanged)
 	dependency.curveChanged.connect(curveChanged)
@@ -123,9 +124,3 @@ func connect_dependency(dependency: Dependency):
 	
 	if(has_node(dependency.node)):
 		dependency.name = dependency.node.get_name(dependency.node.get_name_count() - 1)
-		var nodeObject: TechNode = get_node(dependency.node)
-		nodeObject.positionChanged.connect(func (nodePosition):
-			if(dependency.curve == null):
-				return
-			dependency.curve.set_point_position(0, to_local(nodePosition))
-		)
