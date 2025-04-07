@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://coarme3bsgscw"]
 
-[ext_resource type="Script" uid="uid://1n7dl2jsghkc" path="res://Scripts/Main.gd" id="1_50glp"]
-[ext_resource type="Script" uid="uid://dg0tw4c1yldw7" path="res://Scripts/Camera3d.gd" id="1_pbw6q"]
+[ext_resource type="Script" path="res://Scripts/Main.gd" id="1_50glp"]
+[ext_resource type="Script" path="res://Scripts/Camera3d.gd" id="1_pbw6q"]
 [ext_resource type="Script" uid="uid://6l363iepftwb" path="res://Scripts/TechNode.gd" id="1_rgh2o"]
 [ext_resource type="Script" uid="uid://dl2kb8yiw22y7" path="res://Scripts/InfoPanel.gd" id="6_jw32o"]
 [ext_resource type="Script" uid="uid://bl1nqlm3g42qa" path="res://Scenes/CloseButton.gd" id="6_v1gob"]
@@ -61,6 +61,7 @@ layout_mode = 2
 script = ExtResource("6_jw32o")
 
 [node name="Button" type="Button" parent="CenterContainer/InfoPanel"]
+layout_mode = 0
 layout_mode = 0
 offset_left = 361.0
 offset_top = 6.0
