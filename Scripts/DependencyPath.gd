@@ -32,6 +32,9 @@ func _process(delta: float) -> void:
 		selected = false
 		if(follower.progress == length - end.distance):
 			done = true
+			var material = StandardMaterial3D.new()
+			material.albedo_color = Color(0, 1, 0, 1);
+			$PathFollow3D/MeshInstance3D.set_surface_override_material(0, material)
 			end.completePath.emit();
 	if Input.is_action_pressed('slider_move') && selected:
 		var cast = mouseCast()
@@ -70,4 +73,13 @@ func _ready() -> void:
 	)
 	end.positionChanged.connect(func (nodePosition):
 		curve.set_point_position(0, to_local(nodePosition))
+	)
+	$PathFollow3D/MeshInstance3D.visible = start.active
+	start.activeChanged.connect(func(activ):
+		print("Start Test")
+		$PathFollow3D/MeshInstance3D.visible = start.active
+	)
+	end.activeChanged.connect(func(activ):
+		print("End Test")
+		$PathFollow3D/MeshInstance3D.visible = !start.active
 	)

@@ -21,6 +21,7 @@ var isready = false;
 @export var active = false:
 	set(value):
 		active = value
+		print(value)
 		activeChanged.emit(value)
 		var material = StandardMaterial3D.new()
 		if(value):
