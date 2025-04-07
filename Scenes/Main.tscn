@@ -1,12 +1,60 @@
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 [gd_scene load_steps=22 format=3 uid="uid://coarme3bsgscw"]
+=======
+[gd_scene load_steps=15 format=3 uid="uid://coarme3bsgscw"]
+>>>>>>> Stashed changes
+=======
+[gd_scene load_steps=15 format=3 uid="uid://coarme3bsgscw"]
+>>>>>>> Stashed changes
+=======
+[gd_scene load_steps=15 format=3 uid="uid://coarme3bsgscw"]
+>>>>>>> Stashed changes
+=======
+[gd_scene load_steps=15 format=3 uid="uid://coarme3bsgscw"]
+>>>>>>> Stashed changes
+=======
+[gd_scene load_steps=15 format=3 uid="uid://coarme3bsgscw"]
+>>>>>>> Stashed changes
+=======
+[gd_scene load_steps=15 format=3 uid="uid://coarme3bsgscw"]
+>>>>>>> Stashed changes
 
 [ext_resource type="Script" uid="uid://6l363iepftwb" path="res://Scripts/TechNode.gd" id="1_rgh2o"]
 [ext_resource type="PackedScene" uid="uid://ds1ubnrgv865p" path="res://Scenes/TechNode.tscn" id="2_jw32o"]
 [ext_resource type="ArrayMesh" uid="uid://yia3lk4h4oio" path="res://Meshes/Oil/Oil.mesh" id="3_50glp"]
 [ext_resource type="ArrayMesh" uid="uid://q52on3gyw4lk" path="res://Meshes/Motor/Motor.mesh" id="4_vy5pj"]
 [ext_resource type="Script" uid="uid://75thxom5gfp0" path="res://Scripts/Dependency.gd" id="5_jw32o"]
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 [ext_resource type="PackedScene" uid="uid://bv557cuctre4h" path="res://Scenes/DependencyPath.tscn" id="6_50glp"]
 [ext_resource type="ArrayMesh" uid="uid://coyfr5v3q8i1e" path="res://Meshes/Cathode/Cathode.mesh" id="7_50glp"]
+=======
+[ext_resource type="PackedScene" uid="uid://bv557cuctre4h" path="res://Scenes/DependencyPath.tscn" id="6_jw32o"]
+>>>>>>> Stashed changes
+=======
+[ext_resource type="PackedScene" uid="uid://bv557cuctre4h" path="res://Scenes/DependencyPath.tscn" id="6_jw32o"]
+>>>>>>> Stashed changes
+=======
+[ext_resource type="PackedScene" uid="uid://bv557cuctre4h" path="res://Scenes/DependencyPath.tscn" id="6_jw32o"]
+>>>>>>> Stashed changes
+=======
+[ext_resource type="PackedScene" uid="uid://bv557cuctre4h" path="res://Scenes/DependencyPath.tscn" id="6_jw32o"]
+>>>>>>> Stashed changes
+=======
+[ext_resource type="PackedScene" uid="uid://bv557cuctre4h" path="res://Scenes/DependencyPath.tscn" id="6_jw32o"]
+>>>>>>> Stashed changes
+=======
+[ext_resource type="PackedScene" uid="uid://bv557cuctre4h" path="res://Scenes/DependencyPath.tscn" id="6_jw32o"]
+>>>>>>> Stashed changes
 
 [sub_resource type="GDScript" id="GDScript_idj7w"]
 script/source = "extends Node3D
@@ -28,13 +76,55 @@ glow_enabled = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r150o"]
 
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 [sub_resource type="Curve3D" id="Curve3D_50glp"]
 _data = {
 "points": PackedVector3Array(0, 0, 0, 0, 0, 0, -11.7268, -1.19629, 0.070694, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+=======
+[sub_resource type="Curve3D" id="Curve3D_jw32o"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -10.3891, 1.8013, -0.712721, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+>>>>>>> Stashed changes
+=======
+[sub_resource type="Curve3D" id="Curve3D_jw32o"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -10.3891, 1.8013, -0.712721, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+>>>>>>> Stashed changes
+=======
+[sub_resource type="Curve3D" id="Curve3D_jw32o"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -10.3891, 1.8013, -0.712721, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+>>>>>>> Stashed changes
+=======
+[sub_resource type="Curve3D" id="Curve3D_jw32o"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -10.3891, 1.8013, -0.712721, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+>>>>>>> Stashed changes
+=======
+[sub_resource type="Curve3D" id="Curve3D_jw32o"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -10.3891, 1.8013, -0.712721, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+>>>>>>> Stashed changes
+=======
+[sub_resource type="Curve3D" id="Curve3D_jw32o"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -10.3891, 1.8013, -0.712721, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+>>>>>>> Stashed changes
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 [sub_resource type="BoxMesh" id="BoxMesh_v1gob"]
 
 [sub_resource type="Resource" id="Resource_bmxlf"]
@@ -72,6 +162,60 @@ script = ExtResource("5_jw32o")
 node = NodePath("../TechNode")
 curve = SubResource("Curve3D_frkhe")
 model = SubResource("BoxMesh_1p5hy")
+=======
+[sub_resource type="BoxMesh" id="BoxMesh_50glp"]
+
+[sub_resource type="Resource" id="Resource_vy5pj"]
+script = ExtResource("5_jw32o")
+node = NodePath("../TechNode")
+curve = SubResource("Curve3D_jw32o")
+model = SubResource("BoxMesh_50glp")
+>>>>>>> Stashed changes
+=======
+[sub_resource type="BoxMesh" id="BoxMesh_50glp"]
+
+[sub_resource type="Resource" id="Resource_vy5pj"]
+script = ExtResource("5_jw32o")
+node = NodePath("../TechNode")
+curve = SubResource("Curve3D_jw32o")
+model = SubResource("BoxMesh_50glp")
+>>>>>>> Stashed changes
+=======
+[sub_resource type="BoxMesh" id="BoxMesh_50glp"]
+
+[sub_resource type="Resource" id="Resource_vy5pj"]
+script = ExtResource("5_jw32o")
+node = NodePath("../TechNode")
+curve = SubResource("Curve3D_jw32o")
+model = SubResource("BoxMesh_50glp")
+>>>>>>> Stashed changes
+=======
+[sub_resource type="BoxMesh" id="BoxMesh_50glp"]
+
+[sub_resource type="Resource" id="Resource_vy5pj"]
+script = ExtResource("5_jw32o")
+node = NodePath("../TechNode")
+curve = SubResource("Curve3D_jw32o")
+model = SubResource("BoxMesh_50glp")
+>>>>>>> Stashed changes
+=======
+[sub_resource type="BoxMesh" id="BoxMesh_50glp"]
+
+[sub_resource type="Resource" id="Resource_vy5pj"]
+script = ExtResource("5_jw32o")
+node = NodePath("../TechNode")
+curve = SubResource("Curve3D_jw32o")
+model = SubResource("BoxMesh_50glp")
+>>>>>>> Stashed changes
+=======
+[sub_resource type="BoxMesh" id="BoxMesh_50glp"]
+
+[sub_resource type="Resource" id="Resource_vy5pj"]
+script = ExtResource("5_jw32o")
+node = NodePath("../TechNode")
+curve = SubResource("Curve3D_jw32o")
+model = SubResource("BoxMesh_50glp")
+>>>>>>> Stashed changes
 
 [node name="Main" type="Node3D"]
 script = SubResource("GDScript_idj7w")
@@ -100,6 +244,12 @@ light_energy = 5.215
 script = ExtResource("1_rgh2o")
 
 [node name="TechNode" parent="Nodes" instance=ExtResource("2_jw32o")]
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.11626, 1.53712, 0.0317898)
 model = ExtResource("3_50glp")
 
@@ -124,3 +274,72 @@ model = SubResource("BoxMesh_4kpch")
 [node name="TechNode_Path" parent="Nodes/TechNode3" instance=ExtResource("6_50glp")]
 curve = SubResource("Curve3D_frkhe")
 model = SubResource("BoxMesh_1p5hy")
+=======
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.25017, 7.2527, 0.274266)
+model = ExtResource("3_50glp")
+
+[node name="TechNode2" parent="Nodes" instance=ExtResource("2_jw32o")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 23.0284, 3.65011, 1.69971)
+model = ExtResource("4_vy5pj")
+=======
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.25017, 7.2527, 0.274266)
+model = ExtResource("3_50glp")
+
+[node name="TechNode2" parent="Nodes" instance=ExtResource("2_jw32o")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 23.0284, 3.65011, 1.69971)
+model = ExtResource("4_vy5pj")
+>>>>>>> Stashed changes
+=======
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.25017, 7.2527, 0.274266)
+model = ExtResource("3_50glp")
+
+[node name="TechNode2" parent="Nodes" instance=ExtResource("2_jw32o")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 23.0284, 3.65011, 1.69971)
+model = ExtResource("4_vy5pj")
+>>>>>>> Stashed changes
+=======
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.25017, 7.2527, 0.274266)
+model = ExtResource("3_50glp")
+
+[node name="TechNode2" parent="Nodes" instance=ExtResource("2_jw32o")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 23.0284, 3.65011, 1.69971)
+model = ExtResource("4_vy5pj")
+>>>>>>> Stashed changes
+=======
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.25017, 7.2527, 0.274266)
+model = ExtResource("3_50glp")
+
+[node name="TechNode2" parent="Nodes" instance=ExtResource("2_jw32o")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 23.0284, 3.65011, 1.69971)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 23.0284, 3.65011, 1.69971)
+model = ExtResource("4_vy5pj")
+>>>>>>> Stashed changes
+=======
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.25017, 7.2527, 0.274266)
+model = ExtResource("3_50glp")
+
+[node name="TechNode2" parent="Nodes" instance=ExtResource("2_jw32o")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 23.0284, 3.65011, 1.69971)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 23.0284, 3.65011, 1.69971)
+model = ExtResource("4_vy5pj")
+>>>>>>> Stashed changes
+dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_vy5pj")])
+
+[node name="TechNode_Path" parent="Nodes/TechNode2" instance=ExtResource("6_jw32o")]
+curve = SubResource("Curve3D_jw32o")
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes

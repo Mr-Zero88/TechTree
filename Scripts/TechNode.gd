@@ -31,6 +31,7 @@ var isready = false;
 func _ready() -> void:
 	isready = true;
 	for i in range(dependencies.size()):
+<<<<<<< Updated upstream
 		connect_dependency(dependencies[i])
 
 #
@@ -46,6 +47,13 @@ func _ready() -> void:
 		##print(dependency)
 		##print(dependency.nameChanged)
 		##print(dependency.name)
+=======
+		#connect_dependency(dependencies[i])
+		#dependencies[i].path = find_child(dependencies[i].name)
+		#dependencies[i].
+		print(dependencies[i].get_class())
+		print(dependencies[i].name)
+>>>>>>> Stashed changes
 
 func _init() -> void:
 	set_notify_transform(true)
