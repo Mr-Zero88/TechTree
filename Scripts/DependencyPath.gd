@@ -3,7 +3,7 @@ extends Path3D
 class_name DependencyPath
 
 const RAY_LENGTH = 100
-const SPEED = 5
+const SPEED = 500
 
 var follower: PathFollow3D;
 var body: StaticBody3D;
@@ -40,9 +40,9 @@ func _process(delta: float) -> void:
 			var target = self.curve.get_closest_offset(position)
 			var distance = target - follower.progress;
 			var direction = 1 if distance > 0 else -1;
-			if(abs(distance) < direction / length * SPEED):
+			if(abs(distance) < direction / length * SPEED * delta):
 				return
-			follower.progress += direction / length * SPEED
+			follower.progress += direction / length * SPEED * delta
 			if(follower.progress < start.distance): follower.progress = start.distance
 			if(follower.progress > length - end.distance): follower.progress = length - end.distance
 

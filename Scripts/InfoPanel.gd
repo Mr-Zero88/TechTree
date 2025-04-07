@@ -1,10 +1,11 @@
 extends Panel
 class_name InfoPanel
 
-signal show(text: String)
+signal show(name: String, text: String)
 
 func _ready() -> void:
-	show.connect(func (text):
+	show.connect(func (name, text):
 		visible = true
 		$RichTextLabel.text = text
+		$RichTextLabel2.text = name
 	)

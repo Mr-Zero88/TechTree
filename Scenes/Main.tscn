@@ -1,12 +1,9 @@
-[gd_scene load_steps=26 format=3 uid="uid://coarme3bsgscw"]
+[gd_scene load_steps=10 format=3 uid="uid://coarme3bsgscw"]
 
 [ext_resource type="Script" uid="uid://1n7dl2jsghkc" path="res://Scripts/Main.gd" id="1_50glp"]
 [ext_resource type="Script" uid="uid://dg0tw4c1yldw7" path="res://Scripts/Camera3d.gd" id="1_pbw6q"]
 [ext_resource type="Script" uid="uid://6l363iepftwb" path="res://Scripts/TechNode.gd" id="1_rgh2o"]
-[ext_resource type="PackedScene" uid="uid://ds1ubnrgv865p" path="res://Scenes/TechNode.tscn" id="2_jw32o"]
-[ext_resource type="Script" uid="uid://75thxom5gfp0" path="res://Scripts/Dependency.gd" id="5_jw32o"]
-[ext_resource type="PackedScene" uid="uid://bv557cuctre4h" path="res://Scenes/DependencyPath.tscn" id="6_50glp"]
-[ext_resource type="Script" uid="uid://dl2kb8yiw22y7" path="res://Scenes/InfoPanel.gd" id="6_jw32o"]
+[ext_resource type="Script" uid="uid://dl2kb8yiw22y7" path="res://Scripts/InfoPanel.gd" id="6_jw32o"]
 [ext_resource type="Script" uid="uid://bl1nqlm3g42qa" path="res://Scenes/CloseButton.gd" id="6_v1gob"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_r150o"]
@@ -24,61 +21,6 @@ ssao_enabled = true
 glow_enabled = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r150o"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pbw6q"]
-albedo_color = Color(1, 0, 0, 1)
-
-[sub_resource type="TorusMesh" id="TorusMesh_jw32o"]
-material = SubResource("StandardMaterial3D_pbw6q")
-
-[sub_resource type="TorusMesh" id="TorusMesh_pbw6q"]
-
-[sub_resource type="Curve3D" id="Curve3D_jw32o"]
-_data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -11.7268, -1.19629, 0.070694, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-"tilts": PackedFloat32Array(0, 0)
-}
-point_count = 2
-
-[sub_resource type="BoxMesh" id="BoxMesh_50glp"]
-
-[sub_resource type="Resource" id="Resource_vy5pj"]
-script = ExtResource("5_jw32o")
-node = NodePath("../TechNode")
-curve = SubResource("Curve3D_jw32o")
-model = SubResource("BoxMesh_50glp")
-
-[sub_resource type="TorusMesh" id="TorusMesh_v1gob"]
-
-[sub_resource type="Curve3D" id="Curve3D_v1gob"]
-_data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -14.6837, -1.7781, -7.8211, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-"tilts": PackedFloat32Array(0, 0)
-}
-point_count = 2
-
-[sub_resource type="BoxMesh" id="BoxMesh_jw32o"]
-
-[sub_resource type="Resource" id="Resource_50glp"]
-script = ExtResource("5_jw32o")
-node = NodePath("../TechNode")
-curve = SubResource("Curve3D_v1gob")
-model = SubResource("BoxMesh_jw32o")
-
-[sub_resource type="Curve3D" id="Curve3D_vy5pj"]
-_data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -2.9569, -0.58181, -7.89179, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-"tilts": PackedFloat32Array(0, 0)
-}
-point_count = 2
-
-[sub_resource type="BoxMesh" id="BoxMesh_bmxlf"]
-
-[sub_resource type="Resource" id="Resource_4kpch"]
-script = ExtResource("5_jw32o")
-node = NodePath("../TechNode2")
-curve = SubResource("Curve3D_vy5pj")
-model = SubResource("BoxMesh_bmxlf")
 
 [node name="Main" type="Node3D" node_paths=PackedStringArray("infoPanel")]
 script = ExtResource("1_50glp")
@@ -106,51 +48,6 @@ ground = NodePath("../CSGBox3D")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.46166, 0)
 light_energy = 5.215
 
-[node name="Nodes" type="Node3D" parent="."]
-script = ExtResource("1_rgh2o")
-active = null
-
-[node name="TechNode" parent="Nodes" instance=ExtResource("2_jw32o")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.11626, 1.53712, 0.0317898)
-model = SubResource("TorusMesh_jw32o")
-unlockText = "Test1"
-distance = 2.0
-active = true
-
-[node name="TechNode2" parent="Nodes" instance=ExtResource("2_jw32o")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.6105, 2.73341, -0.0389042)
-model = SubResource("TorusMesh_pbw6q")
-unlockText = "Test2"
-distance = 2.0
-active = null
-dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_vy5pj")])
-
-[node name="TechNode_Path" parent="Nodes/TechNode2" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
-curve = SubResource("Curve3D_jw32o")
-start = NodePath("../../TechNode")
-end = NodePath("..")
-model = SubResource("BoxMesh_50glp")
-
-[node name="TechNode3" parent="Nodes" instance=ExtResource("2_jw32o")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5674, 3.31522, 7.85289)
-model = SubResource("TorusMesh_v1gob")
-unlockText = "Test3"
-distance = 2.0
-active = null
-dependencies = Array[ExtResource("5_jw32o")]([SubResource("Resource_50glp"), SubResource("Resource_4kpch")])
-
-[node name="TechNode_Path" parent="Nodes/TechNode3" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
-curve = SubResource("Curve3D_v1gob")
-start = NodePath("../../TechNode")
-end = NodePath("..")
-model = SubResource("BoxMesh_jw32o")
-
-[node name="TechNode2_Path" parent="Nodes/TechNode3" node_paths=PackedStringArray("start", "end") instance=ExtResource("6_50glp")]
-curve = SubResource("Curve3D_vy5pj")
-start = NodePath("../../TechNode2")
-end = NodePath("..")
-model = SubResource("BoxMesh_bmxlf")
-
 [node name="CenterContainer" type="CenterContainer" parent="."]
 anchors_preset = 15
 anchor_right = 1.0
@@ -164,6 +61,7 @@ layout_mode = 2
 script = ExtResource("6_jw32o")
 
 [node name="Button" type="Button" parent="CenterContainer/InfoPanel"]
+layout_mode = 0
 offset_left = 361.0
 offset_top = 6.0
 offset_right = 393.0
@@ -177,3 +75,14 @@ offset_left = 8.0
 offset_top = 43.0
 offset_right = 391.0
 offset_bottom = 294.0
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="CenterContainer/InfoPanel"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 11.0
+offset_right = 337.0
+offset_bottom = 44.0
+
+[node name="Nodes" type="Node3D" parent="."]
+script = ExtResource("1_rgh2o")
+active = null
